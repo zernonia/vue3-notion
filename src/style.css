@@ -2442,3 +2442,11 @@ svg.notion-page-icon {
 .notion-sync-block {
   width: 100%;
 }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none;
+}
