@@ -39,7 +39,7 @@ export default [
       {
         format: "esm",
         name: "Vue3Notion",
-        file: "dist/library.ts",
+        file: "dist/library.mts",
       },
     ],
     external,

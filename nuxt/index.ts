@@ -6,8 +6,8 @@ export default defineNuxtModule({
   name: "vue3-notion",
   configKey: "notion",
   setup(options, nuxt) {
-    const __filename = fileURLToPath(import.meta.url)
-    const __dirname = dirname(__filename)
+    const filename = fileURLToPath(import.meta.url)
+    const __dirname = dirname(filename)
 
     addPluginTemplate({
       src: resolve(__dirname, "./library.ts"),
