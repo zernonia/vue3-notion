@@ -9,7 +9,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nuxt3": "latest",
-    "vue3-notion": "^0.0.6"
+    "nuxt3": "3.0.0-27274229.29599f0",
+    "vue3-notion": "^0.0.7"
   }
 }

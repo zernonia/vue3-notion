@@ -10,7 +10,7 @@ export default defineNuxtModule({
     const __dirname = dirname(filename)
     console.log(__dirname)
     addPluginTemplate({
-      src: resolve(__dirname, "../dist/library.ts"),
+      src: resolve(__dirname, "plugin.ts"),
       filename: "vue3-notion.ts",
       options,
     })
