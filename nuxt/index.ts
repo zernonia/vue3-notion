@@ -22,3 +22,5 @@ export default defineNuxtModule({
     })
   },
 })
+
+module.exports.meta = require("../package.json")

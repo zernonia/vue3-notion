@@ -23,10 +23,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-
-<style>
-@import "@/style.css";
-body {
-  margin: 0;
-}
-</style>

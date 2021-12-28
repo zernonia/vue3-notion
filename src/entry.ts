@@ -1,4 +1,4 @@
-import { App, Plugin } from "vue"
+import { App } from "vue"
 import * as components from "@/components/index"
 
 // Default export is library as a whole, registered via Vue.use()
