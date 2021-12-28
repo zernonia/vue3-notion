@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { NotionRenderer } from "./components"
+// import { NotionRenderer } from "./components"
+import { NotionRenderer } from "../dist/library"
+
 import { getPageBlocks } from "./lib/api"
-import "prismjs"
-import "prismjs/themes/prism.css"
-// import "katex/dist/katex.min.css"
 import { onMounted, ref } from "vue"
 
 const blockMap = ref()

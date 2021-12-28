@@ -1,4 +1,4 @@
-export interface BlockList {
+export interface BlockMap {
   [key: string]: Block
 }
 
@@ -51,7 +51,7 @@ export enum Role {
 }
 
 export interface NotionBlockProps {
-  blockMap: BlockList
+  blockMap: BlockMap
   contentId: string
   contentIndex: number
   embedAllow: string

@@ -1,24 +1,49 @@
 {
-  "name": "vue3-notion-x",
-  "version": "0.0.0",
+  "name": "vue3-notion",
+  "version": "0.0.1",
+  "description": "Vue 3 Unofficial Notion Renderer",
+  "repository": "github:zernonia/vue3-notion",
+  "main": "dist/library.js",
+  "browser": "dist/library.js",
+  "module": "dist/library.js",
+  "unpkg": "dist/min.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.css",
+    "src/**/*.css"
+  ],
+  "keywords": [
+    "vue",
+    "notion"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "rollup": "rollup -c"
   },
   "dependencies": {
     "fragment-for-vue": "^1.0.1",
-    "notion-client": "^4.12.0",
-    "notion-types": "^4.10.0",
-    "notion-utils": "^4.12.0",
     "prismjs": "^1.25.0",
     "vue": "^3.2.26"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.8",
     "@types/prismjs": "^1.16.6",
     "@vitejs/plugin-vue": "^2.0.0",
+    "postcss": "^8.4.5",
+    "rollup": "^2.62.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "tslib": "^2.3.1",
     "typescript": "^4.4.4",
     "vite": "^2.7.2",
     "vue-tsc": "^0.29.8"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.26"
   }
 }

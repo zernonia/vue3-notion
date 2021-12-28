@@ -1,11 +1,11 @@
-import { Block, BlockList } from "./types"
+import { Block, BlockMap } from "./types"
 
 // utils from react-notion
 export const getTextContent = (text: string[]) => {
   return text.reduce((prev, current) => prev + current[0], "")
 }
 
-const groupBlockContent = (blockMap: BlockList) => {
+const groupBlockContent = (blockMap: BlockMap) => {
   const output: any[] = []
 
   let lastType: any = undefined
@@ -30,7 +30,7 @@ const groupBlockContent = (blockMap: BlockList) => {
   return output
 }
 
-export const getListNumber = (blockId: string, blockMap: BlockList) => {
+export const getListNumber = (blockId: string, blockMap: BlockMap) => {
   const groups = groupBlockContent(blockMap)
   const group = groups.find((g) => g.includes(blockId))
 

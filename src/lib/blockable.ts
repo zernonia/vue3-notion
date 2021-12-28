@@ -1,9 +1,9 @@
 import { defaultMapImageUrl, defaultMapPageUrl } from "@/lib/utils"
 import { computed, PropType } from "vue"
-import { NotionBlockProps, BlockList } from "./types"
+import { NotionBlockProps, BlockMap } from "./types"
 
 export const defineNotionProps = {
-  blockMap: { type: Object as PropType<BlockList>, required: true },
+  blockMap: { type: Object as PropType<BlockMap>, required: true },
   contentId: { type: String, required: false },
   contentIndex: { type: Number, default: 0 },
   embedAllow: { type: String, default: "fullscreen" },
