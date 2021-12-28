@@ -1,6 +1,6 @@
 {
   "name": "vue3-notion",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Vue 3 Unofficial Notion Renderer",
   "repository": "github:zernonia/vue3-notion",
   "main": "dist/library.ts",
@@ -28,17 +28,16 @@
     "fragment-for-vue": "^1.0.1",
     "katex": "^0.15.1",
     "prismjs": "^1.25.0",
-    "vue": "^3.2.26"
+    "vue": "^3.2.26",
+    "@nuxt/kit-edge": "^3.0.0-27338323.1e98259",
+    "pathe": "^0.2.0"
   },
   "devDependencies": {
-    "@nuxt/kit": "^0.8.1-edge",
-    "@nuxt/kit-edge": "^3.0.0-27338323.1e98259",
     "@rollup/plugin-alias": "^3.1.8",
     "@rollup/plugin-replace": "^3.0.0",
     "@types/katex": "^0.11.1",
     "@types/prismjs": "^1.16.6",
     "@vitejs/plugin-vue": "^2.0.0",
-    "pathe": "^0.2.0",
     "postcss": "^8.4.5",
     "rollup": "^2.62.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
