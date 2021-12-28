@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPluginTemplate } from "@nuxt/kit"
+import { defineNuxtModule, addPluginTemplate } from "@nuxt/kit-edge"
 import { fileURLToPath } from "url"
 import { dirname, resolve } from "pathe"
 
@@ -8,9 +8,9 @@ export default defineNuxtModule({
   setup(options, nuxt) {
     const filename = fileURLToPath(import.meta.url)
     const __dirname = dirname(filename)
-
+    console.log(__dirname)
     addPluginTemplate({
-      src: resolve(__dirname, "./library.ts"),
+      src: resolve(__dirname, "../dist/library.ts"),
       filename: "vue3-notion.ts",
       options,
     })

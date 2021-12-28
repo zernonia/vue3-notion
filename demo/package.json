@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "nuxt3": "latest",
-    "vue3-notion": "latest"
+    "vue3-notion": "^0.0.6"
   }
 }

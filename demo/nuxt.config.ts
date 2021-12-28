@@ -7,5 +7,5 @@ export default defineNuxtConfig({
     link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
   },
 
-  buildModules: ["../nuxt/index"],
+  buildModules: ["vue3-notion/nuxt"],
 })
