@@ -18,7 +18,7 @@ const props = defineProps({
 })
 
 const { code, inline, language } = toRefs(props)
-const prismLanguage = Prism.languages[language.value]
+const prismLanguage = computed(() => Prism?.languages[language.value])
 const className = computed(() => `language-${language.value}`)
 
 const d = computed(() => Prism.highlight(code?.value, prismLanguage, "en"))

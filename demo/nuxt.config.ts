@@ -14,5 +14,5 @@ export default defineNuxtConfig({
   // build: {
   //   transpile: ["vue3-notion"],
   // },
-  buildModules: ["vue3-notion/nuxt"],
+  buildModules: ["../nuxt"],
 })

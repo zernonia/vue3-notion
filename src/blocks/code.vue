@@ -17,7 +17,7 @@ const langClass = computed(() => {
 })
 
 const supported = computed(() => {
-  return Prism.languages[lang.value]
+  return Prism?.languages[lang.value]
 })
 </script>
 

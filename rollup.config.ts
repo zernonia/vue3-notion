@@ -22,6 +22,7 @@ const plugins = [
   replace({
     "process.env.NODE_ENV": JSON.stringify("production"),
     "process.env.ES_BUILD": JSON.stringify("false"),
+    preventAssignment: true,
   }),
   alias({
     entries: {
@@ -40,6 +41,7 @@ export default [
         format: "esm",
         name: "Vue3Notion",
         file: "dist/library.ts",
+        exports: "named",
       },
     ],
     external,
@@ -53,6 +55,7 @@ export default [
         format: "cjs",
         name: "Vue3Notion",
         file: "dist/library.ssr.ts",
+        exports: "named",
         globals,
       },
     ],
@@ -67,6 +70,7 @@ export default [
       format: "iife",
       name: "Vue3Notion",
       file: "dist/min.js",
+      exports: "named",
       globals,
     },
     plugins: [vue(), ...plugins],

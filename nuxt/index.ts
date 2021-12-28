@@ -8,7 +8,6 @@ export default defineNuxtModule({
   setup(options, nuxt) {
     const filename = fileURLToPath(import.meta.url)
     const __dirname = dirname(filename)
-    console.log(__dirname)
     addPluginTemplate({
       src: resolve(__dirname, "plugin.ts"),
       filename: "vue3-notion.ts",
@@ -22,5 +21,3 @@ export default defineNuxtModule({
     })
   },
 })
-
-module.exports.meta = require("../package.json")
