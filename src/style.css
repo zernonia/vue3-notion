@@ -860,10 +860,15 @@ svg.notion-page-icon {
   display: flex;
   overflow: hidden;
   user-select: none;
+  transition: background 150ms ease-in-out 0s;
 }
 
 .dark-mode .notion-bookmark {
   border-color: var(--bg-color-0);
+}
+.notion-bookmark:hover {
+  transition: background 150ms ease-in-out 0s;
+  background: var(--bg-color-0);
 }
 
 .notion-bookmark > div:first-child {

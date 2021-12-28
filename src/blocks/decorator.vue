@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
+import NotionKatek from "@/blocks/helpers/katex.vue"
 import { computed, PropType } from "vue"
 
 const props = defineProps({
@@ -88,7 +89,7 @@ export default {
   <s v-else-if="decoratorKey === 's'">
     <NotionDecorator :content="nextContent" v-bind="pass" />
   </s>
-  <component v-else-if="decoratorKey === 'e' && blockProps.katex" :is="'katex-element'" :expression="decoratorValue" />
+  <NotionKatek v-else-if="decoratorKey === 'e' && blockProps.katex" :expression="decoratorValue" />
   <code v-else-if="decoratorKey === 'e'" class="notion-inline-code">
     {{ decoratorValue }}
   </code>

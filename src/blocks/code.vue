@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Prism from "prismjs"
+import "prismjs/themes/prism.css"
 import PrismBlock from "./helpers/prism.vue"
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import { computed } from "vue"

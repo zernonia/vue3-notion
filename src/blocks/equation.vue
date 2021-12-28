@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionCode from "./code.vue"
+import NotionKatek from "@/blocks/helpers/katex.vue"
 import { computed } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
@@ -17,7 +18,7 @@ export default {
 
 <template>
   <div v-if="props.katex">
-    <component :is="'katex-element'" :expression="equation" />
+    <NotionKatek :expression="equation" />
   </div>
   <NotionCode v-else v-bind="pass" overrideLang="latex" overrideLangClass="language-latex" />
 </template>
