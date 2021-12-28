@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "Vue 3 Unofficial Notion Renderer",
   "repository": "github:zernonia/vue3-notion",
-  "main": "dist/library.js",
-  "browser": "dist/library.js",
-  "module": "dist/library.js",
+  "main": "dist/library.ts",
+  "browser": "dist/library.ts",
+  "module": "dist/library.ts",
   "unpkg": "dist/min.js",
   "files": [
-    "dist/*.js",
+    "dist/*.ts",
     "dist/*.css",
     "src/**/*.css"
   ],
@@ -19,9 +19,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "rollup": "rollup -c"
+    "dev:build": "vue-tsc --noEmit && vite build",
+    "build": "rollup -c",
+    "preview": "vite preview"
   },
   "dependencies": {
     "fragment-for-vue": "^1.0.1",
@@ -33,7 +33,7 @@
     "@rollup/plugin-alias": "^3.1.8",
     "@types/katex": "^0.11.1",
     "@types/prismjs": "^1.16.6",
-    "@vitejs/plugin-vue": "^2.0.0",
+    "@vitets/plugin-vue": "^2.0.0",
     "postcss": "^8.4.5",
     "rollup": "^2.62.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

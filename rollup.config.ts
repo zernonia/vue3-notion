@@ -51,7 +51,7 @@ export default [
     input: "src/entry.ts",
     output: {
       format: "iife",
-      file: "dist/min.ts",
+      file: "dist/min.js",
     },
     plugins: [vue(), ...plugins],
   },
