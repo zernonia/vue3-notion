@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// import { NotionRenderer } from "./components"
-import { NotionRenderer } from "../dist/library"
+import { NotionRenderer } from "./components"
+// import { NotionRenderer } from "../dist/library"
 
 import { getPageBlocks } from "./lib/api"
 import { onMounted, ref } from "vue"

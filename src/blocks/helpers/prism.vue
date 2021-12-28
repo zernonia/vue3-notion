@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import Prism from "prismjs"
 import "prismjs/themes/prism.css"
-import { computed, toRefs } from "vue"
+import { computed, toRefs, useSlots } from "vue"
 
+const slots = useSlots()
 const props = defineProps({
   code: {
     type: String,
-    required: true,
   },
   inline: {
     type: Boolean,
@@ -18,16 +18,18 @@ const props = defineProps({
   },
 })
 
-const { code, inline, language } = toRefs(props)
-const prismLanguage = computed(() => Prism?.languages[language.value])
+const { inline, language } = toRefs(props)
 const className = computed(() => `language-${language.value}`)
 
-const d = computed(() => Prism?.highlight(code?.value, prismLanguage, "en"))
+const defaultSlot = (slots && slots.default && slots.default()) || []
+const code =
+  props.code || (defaultSlot && defaultSlot.length && defaultSlot[0]?.children) ? defaultSlot[0].children : ""
+const d = computed(() => Prism?.highlight(code, Prism?.languages[language.value], "en"))
 </script>
 
 <template>
-  <code v-if="inline" v-html="d"></code>
+  <code :class="className" v-if="inline" v-html="d"></code>
   <pre :class="className" v-else>
-  <code  v-html="d"></code>
-</pre>
+    <code v-html="d"></code>
+  </pre>
 </template>

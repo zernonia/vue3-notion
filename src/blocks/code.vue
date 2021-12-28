@@ -30,6 +30,6 @@ export default {
   <pre
     v-if="supported"
     :class="['notion-code', langClass]"
-  ><PrismBlock :language="lang" :code="properties?.title[0][0]" ></PrismBlock></pre>
+  ><PrismBlock :language="lang" >{{ properties?.title[0][0] }}</PrismBlock></pre>
   <pre v-else :class="['notion-code', langClass]"><code :class="langClass">{{ properties?.title[0][0] }}</code></pre>
 </template>

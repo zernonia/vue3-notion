@@ -8,11 +8,11 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: ["vue3-notion"],
+      include: ["vue3-notion", "prismjs"],
     },
   },
   build: {
-    transpile: ["vue3-notion"],
+    transpile: ["vue3-notion", "prismjs"],
   },
   buildModules: ["vue3-notion/nuxt"],
 })
