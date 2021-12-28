@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Prism from "prismjs"
+import "prismjs/themes/prism.css"
 import { computed, toRefs } from "vue"
 
 const props = defineProps({
@@ -21,7 +22,7 @@ const { code, inline, language } = toRefs(props)
 const prismLanguage = computed(() => Prism?.languages[language.value])
 const className = computed(() => `language-${language.value}`)
 
-const d = computed(() => Prism.highlight(code?.value, prismLanguage, "en"))
+const d = computed(() => Prism?.highlight(code?.value, prismLanguage, "en"))
 </script>
 
 <template>

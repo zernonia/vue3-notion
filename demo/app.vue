@@ -2,7 +2,7 @@
 import { getPageBlocks } from "vue3-notion"
 import { onMounted, ref } from "vue"
 import { useNuxtApp } from "#app"
-import "../src/style.css"
+import "vue3-notion/dist/style.css"
 
 const nuxtApp = useNuxtApp()
 const { data } = await useAsyncData("count", () => getPageBlocks("2e22de6b770e4166be301490f6ffd420"))

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Prism from "prismjs"
-import "prismjs/themes/prism.css"
 import PrismBlock from "./helpers/prism.vue"
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import { computed } from "vue"
@@ -31,6 +30,6 @@ export default {
   <pre
     v-if="supported"
     :class="['notion-code', langClass]"
-  ><PrismBlock :language="lang" :code="properties.title[0][0]" ></PrismBlock></pre>
-  <pre v-else :class="['notion-code', langClass]"><code :class="langClass">{{ properties.title[0][0] }}</code></pre>
+  ><PrismBlock :language="lang" :code="properties?.title[0][0]" ></PrismBlock></pre>
+  <pre v-else :class="['notion-code', langClass]"><code :class="langClass">{{ properties?.title[0][0] }}</code></pre>
 </template>

@@ -80,7 +80,7 @@ export default [
     input: "postcss.ts",
     output: {
       format: "es",
-      file: "dist/styles.ignore",
+      file: "dist/style.ignore",
     },
     plugins: [
       postcss({
