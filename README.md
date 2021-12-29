@@ -1,11 +1,170 @@
-# Vue 3 + Typescript + Vite
+<div align="center">
+  <img src="https://github.com/zernonia/vue3-notion/raw/main/assets/vue3-notion.png" alt="vue3-notion" width="398px" />
+  <p>An unofficial Notion renderer (Vue 3) version</p>
+</div>
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<h3 align="center">
+  <a href="#features">Features</a>
+  <span> · </span>
+  <a href="#install">Install</a>
+  <span> · </span>
+  <a href="#docs">Docs</a>
+  <span> · </span>
+  <a href="#examples">Examples</a>
+  <span> · </span>
+  <a href="#credits">Credits</a>
+</h3>
 
-## Recommended IDE Setup
+<p align="center">
+  <a href="https://www.npmjs.org/package/vue3-notion">
+    <img src="https://img.shields.io/npm/v/vue3-notion.svg" alt="Package version" />
+  </a>
+  <a href="https://github.com/janniks/vue3-notion/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=zernonia">
+    <img src="https://img.shields.io/twitter/url?label=Follow&style=social&url=https%3A%2F%2Ftwitter.com%2Fzernonia" alt="Follow on Twitter" />
+  </a>
+</p>
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+---
 
-## Type Support For `.vue` Imports in TS
+A **Vue 3** renderer for Notion pages (ported from [vue-notion](https://github.com/janniks/vue-notion)). Special thanks to [Jannik Siebert](https://twitter.com/jnnksbrt) & all the `vue-notion` contributors that made the `vue-notion` possible!
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+Use **Notion as CMS** for your blog, documentation or personal site.
+Also check out [react-notion](https://github.com/splitbee/react-notion) (developed by [Splitbee 🐝](https://splitbee.io/) – a fast, reliable, free, and modern analytics for any team)
+
+This package doesn't handle the communication with the API (I planned to add this!). Check out [notion-api-worker](https://github.com/splitbee/notion-api-worker) from [Splitbee](https://splitbee.io/) for an easy solution.
+
+<sub>Created by <a href="https://twitter.com/zernonia">Zernonia</a></sub>
+
+## Features
+
+🌎 **SSR / Static Generation Support** – Functions to work with [**Nuxt3**](https://v3.nuxtjs.org/) and other frameworks
+
+🎯 **Accurate** – Results are _almost_ identical
+
+🎨 **Custom Styles** – Styles are easily adaptable. Optional styles included
+
+🔮 **Syntax-Highlighting** – Beautiful themeable code highlighting using Prism.js
+
+## Install
+
+### Vue 3
+
+```bash
+npm install vue3-notion
+```
+
+### Nuxt3 Module
+
+Install as a dev-dependency and add `"vue3-notion/nuxt"` to the `buildModules` array in `nuxt.config.js`.
+
+```bash
+npm install vue3-notion --save-dev
+```
+
+```ts
+// nuxt.config.ts
+import { defineNuxtConfig } from "nuxt3"
+
+export default defineNuxtConfig({
+  //...
+  buildModules: ["vue3-notion/nuxt"],
+  css: ["vue3-notion/dist/style.css"],
+})
+```
+
+## Examples
+
+These examples use a simple wrapper around the [`notion-api-worker`](https://github.com/splitbee/notion-api-worker) to access the Notion page data.
+It is also possible to store a page received from the Notion API in `.json` and use it without the `async/await` part.
+
+> Use the `getPageBlocks` and `getPageTable` methods with caution!
+> They are based on the private Notion API.
+> We can NOT guarantee that it will stay stable.
+> The private API is warpped by [notion-api-worker](https://github.com/splitbee/notion-api-worker).
+
+### Basic Example for **Vue 3**
+
+This example is a part of [`demo/`](https://github.com/zeronnia/vue3-notion/demo/) and is hosted at [vue3-notion.vercel.app](https://vue3-notion.vercel.app).
+
+```vue
+<script setup lang="ts">
+import { NotionRenderer, getPageBlocks } from "vue3-notion"
+import { ref, onMounted } from "vue"
+
+const data = ref()
+
+onMounted(async () => {
+  data.value = await getPageBlocks("8c1ab01960b049f6a282dda64a94afc7")
+})
+}
+</script>
+
+<template>
+  <NotionRenderer :blockMap="data" fullPage />
+</template>
+
+<style>
+@import "vue3-notion/dist/styles.css"; /* optional Notion-like styles */
+</style>
+```
+
+### Basic Example for **Nuxt3**
+
+This example is a part of [`demo/`](https://github.com/zeronnia/vue3-notion/demo/) and is hosted at [vue3-notion.vercel.app](https://vue3-notion.vercel.app).
+
+```vue
+<script setup lang="ts">
+import { useNuxtApp } from "#app"
+
+const { $notion } = useNuxtApp()
+const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("2e22de6b770e4166be301490f6ffd420"))
+</script>
+
+<template>
+  <NotionRenderer :blockMap="data" fullPage prism />
+</template>
+```
+
+## Supported Blocks
+
+Most common block types are supported. We happily accept pull requests to add support for the missing blocks.
+
+| Block Type        | Supported      | Notes                  |
+| ----------------- | -------------- | ---------------------- |
+| Text              | ✅ Yes         |                        |
+| Heading           | ✅ Yes         |                        |
+| Image             | ✅ Yes         |                        |
+| Image Caption     | ✅ Yes         |                        |
+| Bulleted List     | ✅ Yes         |                        |
+| Numbered List     | ✅ Yes         |                        |
+| Quote             | ✅ Yes         |                        |
+| Callout           | ✅ Yes         |                        |
+| Column            | ✅ Yes         |                        |
+| iframe            | ✅ Yes         |                        |
+| Video             | ✅ Yes         | Only embedded videos   |
+| Divider           | ✅ Yes         |                        |
+| Link              | ✅ Yes         |                        |
+| Code              | ✅ Yes         |                        |
+| Web Bookmark      | ✅ Yes         |                        |
+| Toggle List       | ✅ Yes         |                        |
+| Page Links        | ✅ Yes         |                        |
+| Cover             | ✅ Yes         | Enable with `fullPage` |
+| Equations         | ✅ Yes         |                        |
+| Checkbox          | ✅ Yes         |                        |
+| Simple Tables     | ✅ Yes         |                        |
+| Databases         | ❌ Not planned |                        |
+| Table Of Contents | ❌ Not planned |                        |
+
+Please, feel free to [open an issue](https://github.com/zernonia/vue3-notion/issues/new) if you notice any important blocks missing or anything wrong with existing blocks.
+
+## Credits
+
+- [Jannik Siebert](https://twitter.com/jnnksbrt) – vue-notion Code
+- [All vue-notion contributors!](https://github.com/janniks/vue-notion/graphs/contributors)
+
+## License ⚖️
+
+MIT © [zernonia](https://twitter.com/zernonia)

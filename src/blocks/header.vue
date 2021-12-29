@@ -4,7 +4,7 @@ import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
-const { type, title, pass } = useNotionBlock(props)
+const { type, title, pass, block } = useNotionBlock(props)
 </script>
 
 <script lang="ts">
@@ -14,13 +14,13 @@ export default {
 </script>
 
 <template>
-  <h1 class="notion-h1" v-if="type === 'header'">
+  <h1 class="notion-h1" :id="block.value.id" v-if="type === 'header'">
     <NotionTextRenderer :text="title" v-bind="pass" />
   </h1>
-  <h2 class="notion-h2" v-else-if="type === 'sub_header'">
+  <h2 class="notion-h2" :id="block.value.id" v-else-if="type === 'sub_header'">
     <NotionTextRenderer :text="title" v-bind="pass" />
   </h2>
-  <h3 class="notion-h3" v-else-if="type === 'sub_sub_header'">
+  <h3 class="notion-h3" :id="block.value.id" v-else-if="type === 'sub_sub_header'">
     <NotionTextRenderer :text="title" v-bind="pass" />
   </h3>
 </template>

@@ -53,10 +53,4 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
   <NotionTable v-else-if="isType('table')" v-bind="pass"><slot /></NotionTable>
   <NotionTableRow v-else-if="isType('table_row')" v-bind="pass" />
   <hr v-else-if="isType('divider')" class="notion-hr" />
-  <div v-else-if="props.todo && visible">
-    todo: {{ type }}
-    <slot />
-  </div>
-  <!-- todo: maybe add message on !production if block type unsupported -->
-  <!-- <div v-else-if="visible"><slot /></div> -->
 </template>

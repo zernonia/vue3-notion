@@ -12,7 +12,7 @@ onMounted(async () => {
   // equation tester: 2a1d5226d68246deba627012081693f9
   // table tester: bd1de400a8b349dc824f4f00e61d0797
   // todo tester: 235057194b954a60ace89c052a65d102
-  blockMap.value = await getPageBlocks("c6ea376f96924a8e881be0f1e1461658")
+  blockMap.value = await getPageBlocks("034119d20132420abe8e9863bbe91e9d")
 })
 </script>
 
@@ -23,3 +23,10 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style>
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>
