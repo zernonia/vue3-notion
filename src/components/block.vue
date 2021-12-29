@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
+import { availableType } from "@/lib/constant"
 import NotionBookmark from "@/blocks/bookmark.vue"
 import NotionCallout from "@/blocks/callout.vue"
 import NotionCode from "@/blocks/code.vue"
@@ -19,6 +20,8 @@ import NotionToggle from "@/blocks/toggle.vue"
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { pass, block, visible, type, format, isType } = useNotionBlock(props)
+
+if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`)
 </script>
 
 <template>

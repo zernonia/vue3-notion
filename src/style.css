@@ -415,6 +415,7 @@
 .notion-h1 {
   font-size: 1.875em;
   margin-top: 1.08em;
+  font-weight: 600;
 }
 
 .notion-header-anchor {
@@ -581,6 +582,10 @@ img.notion-page-icon-offset {
   padding-left: calc(min(12px, 8vw));
   padding-right: calc(min(12px, 8vw));
 }
+.notion-page > * {
+  box-sizing: border-box;
+  width: 100%;
+}
 
 .notion-full-width {
   --notion-max-width: calc(min(1920px, 98vw));
@@ -741,6 +746,14 @@ svg.notion-page-icon {
 .notion-list li {
   padding: 6px 0;
   white-space: pre-wrap;
+}
+
+.notion-list-flat {
+  padding-inline-start: 0;
+}
+
+.notion-list-indent {
+  margin-left: 1.6em;
 }
 
 .notion-asset-wrapper {

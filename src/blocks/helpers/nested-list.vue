@@ -6,7 +6,6 @@ import { computed } from "vue"
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { block, type } = useNotionBlock(props)
-// const start = computed(() => getListNumber(block.value.value.id, props.blockMap))
 </script>
 
 <script lang="ts">

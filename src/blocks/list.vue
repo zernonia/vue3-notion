@@ -9,9 +9,11 @@ const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { block, type, title, pass } = useNotionBlock(props)
 
-// const start = computed(() => {
-//   getListNumber(block.value.value.id, props.blockMap)
-// })
+const start = computed(() => {
+  return props.blockMap
+    ? block.value?.value?.format?.list_start_index || getListNumber(block.value.value.id, props.blockMap)
+    : 0
+})
 const isTopLevel = computed(() => type.value != props.blockMap?.[block.value.value.parent_id].value.type)
 </script>
 
@@ -28,14 +30,14 @@ export default {
       <slot />
     </NotionNestedList>
   </ul>
-  <ol v-else-if="isTopLevel && type === 'numbered_list'" class="notion-list notion-list-numbered">
+  <ol v-else-if="isTopLevel && type === 'numbered_list'" class="notion-list notion-list-numbered" :start="start">
     <li><NotionTextRenderer :text="title" v-bind="pass" /></li>
-    <NotionNestedList v-if="block.value.content" v-bind="pass">
+    <NotionNestedList :class="[level == 1 ? 'notion-list-flat' : '']" v-if="block.value.content" v-bind="pass">
       <slot />
     </NotionNestedList>
   </ol>
   <span v-else>
-    <li><NotionTextRenderer :text="title" v-bind="pass" /></li>
+    <li :class="[level != 1 ? 'notion-list-indent' : '']"><NotionTextRenderer :text="title" v-bind="pass" /></li>
     <NotionNestedList v-if="block.value.content" v-bind="pass">
       <slot />
     </NotionNestedList>

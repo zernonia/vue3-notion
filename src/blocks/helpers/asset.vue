@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-  <div :style="style">
+  <div :style="style" v-if="src">
     <iframe class="notion-image-inset" style="width: 100%" :src="src" :allow="props.embedAllow" />
   </div>
 </template>
