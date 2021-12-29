@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Prism from "prismjs"
-import "prismjs/themes/prism.css"
 import { computed, toRefs, useSlots } from "vue"
 
 const slots = useSlots()
@@ -30,8 +29,6 @@ const d = computed(() => Prism?.highlight(code, Prism?.languages[language.value]
 </script>
 
 <template>
-  <div>
-    <code :class="className" v-if="inline" v-html="d"></code>
-    <pre :class="className" v-else><code v-html="d"></code></pre>
-  </div>
+  <code :class="className" v-if="inline" v-html="d"></code>
+  <pre :class="className" v-else><code v-html="d"></code></pre>
 </template>

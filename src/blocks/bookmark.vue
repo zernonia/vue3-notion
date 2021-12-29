@@ -20,7 +20,7 @@ export default {
       target="_blank"
       rel="noopener noreferrer"
       :class="['notion-bookmark', f.block_color && `notion-${f.block_color}`]"
-      :href="properties.link"
+      :href="properties.link[0][0]"
     >
       <div>
         <div class="notion-bookmark-title">

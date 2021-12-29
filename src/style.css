@@ -2448,10 +2448,10 @@ svg.notion-page-icon {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  background: none;
+  background: none !important;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: none;
+  background: none !important;
 }
