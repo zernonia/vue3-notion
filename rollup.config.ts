@@ -15,9 +15,7 @@ const globals = {
 }
 const plugins = [
   typescript({
-    tsconfig: false,
-    experimentalDecorators: true,
-    module: "esnext",
+    tsconfig: "./tsconfig.json",
   }),
   replace({
     "process.env.NODE_ENV": JSON.stringify("production"),
@@ -52,6 +50,7 @@ export default [
     input: "src/entry.ts",
     output: [
       {
+        compact: true,
         format: "cjs",
         name: "Vue3Notion",
         file: "dist/library.ssr.ts",
@@ -67,6 +66,7 @@ export default [
   {
     input: "src/entry.ts",
     output: {
+      compact: true,
       format: "iife",
       name: "Vue3Notion",
       file: "dist/min.js",

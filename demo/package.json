@@ -1,6 +1,6 @@
 {
   "name": "nuxt3-notion",
-  "version": "0.2.9",
+  "version": "0.0.1",
   "description": "Nuxt 3 Notion Renderer.",
   "license": "MIT",
   "scripts": {
