@@ -1,6 +1,6 @@
 {
   "name": "vue3-notion",
-  "version": "0.0.17",
+  "version": "0.0.22",
   "description": "Vue 3 Unofficial Notion Renderer",
   "repository": "github:zernonia/vue3-notion",
   "main": "dist/library.ts",
@@ -8,7 +8,8 @@
   "module": "dist/library.ts",
   "unpkg": "dist/min.js",
   "files": [
-    "dist/*.ts",
+    "dist/**/*.ts",
+    "dist/**/*.d.ts",
     "dist/*.css",
     "src/**/*.css",
     "nuxt/*.ts"
@@ -22,7 +23,7 @@
     "dev": "vite",
     "dev:build": "vue-tsc --noEmit && vite build",
     "build": "rollup -c && tsc --emitDeclarationOnly",
-    "build:types": "vue-tsc --emitDeclarationOnly",
+    "build:types": "vue-tsc --noEmit",
     "preview": "vite preview"
   },
   "dependencies": {
