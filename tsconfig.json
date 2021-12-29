@@ -13,7 +13,7 @@
     "declarationMap": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client"],
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]

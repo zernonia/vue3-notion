@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "vite",
     "dev:build": "vue-tsc --noEmit && vite build",
-    "build": "rollup -c && vue-tsc --emitDeclarationOnly",
+    "build": "rollup -c && tsc --emitDeclarationOnly",
     "build:types": "vue-tsc --emitDeclarationOnly",
     "preview": "vite preview"
   },

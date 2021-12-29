@@ -44,23 +44,30 @@ export interface Properties {
   title: string[]
   caption?: string[]
   description?: string[]
+  language?: string[]
+  [key: string]: any
 }
 
 export enum Role {
   Reader = "reader",
 }
 
-export interface NotionBlockProps {
+export interface PageLinkOptions {
+  component: any
+  href: string
+}
+
+export type NotionBlockProps = {
   blockMap: BlockMap
-  contentId: string
+  contentId?: string
   contentIndex: number
   embedAllow: string
   fullPage: boolean
-  hideList: any[]
+  hideList?: string[]
   level: number
   mapImageUrl: Function
   mapPageUrl: Function
-  pageLinkOptions: Object
+  pageLinkOptions?: PageLinkOptions
   pageLinkTarget: string
   prism: boolean
   katex: boolean

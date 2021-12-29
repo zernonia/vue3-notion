@@ -1,4 +1,4 @@
-const freeze = (object, property, value) => {
+const freeze = (object: any, property: any, value: any) => {
   Object.defineProperty(object, property, {
     configurable: true,
     get() {
@@ -10,7 +10,7 @@ const freeze = (object, property, value) => {
   })
 }
 
-const unfreeze = (object, property, value = null) => {
+const unfreeze = (object: any, property: any, value = null) => {
   Object.defineProperty(object, property, {
     configurable: true,
     writable: true,
@@ -34,6 +34,7 @@ export default {
   },
 
   mounted() {
+    //@ts-ignore
     const container = this.$el
     const parent = container.parentNode
 
@@ -50,7 +51,7 @@ export default {
     let tpl = document.createDocumentFragment()
     tpl.appendChild(head)
 
-    Array.from(container.childNodes).forEach((node) => {
+    Array.from(container.childNodes).forEach((node: any) => {
       // container.appendChild(node, true)
       let notFrChild = !node.hasOwnProperty("__isFragmentChild__")
       tpl.appendChild(node)
@@ -63,8 +64,10 @@ export default {
     tpl.appendChild(tail)
 
     // embed html
+    //@ts-ignore
     if (this.html) {
       let template = document.createElement("template")
+      //@ts-ignore
       template.innerHTML = this.html
       // copy elements over
       Array.from(template.content.childNodes).forEach((node) => {
@@ -82,12 +85,15 @@ export default {
     container.__isMounted = true
   },
 
+  //@ts-ignore
   render(h) {
+    //@ts-ignore
     const children = this.$slots.default
 
     // add fragment attribute on the children
     if (children && children.length)
       children.forEach(
+        //@ts-ignore
         (child) => (child.data = { ...child.data, attrs: { fragment: this.name, ...(child.data || {}).attrs } })
       )
 

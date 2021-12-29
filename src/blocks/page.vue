@@ -7,6 +7,7 @@ import { computed } from "vue"
 import { getTextContent } from "@/lib/utils"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { format, title, block, pass, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
 
 const coverStyle = computed(() => {

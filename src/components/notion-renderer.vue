@@ -3,6 +3,7 @@ import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
 import NotionBlock from "@/components/block.vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { pass, block } = useNotionBlock(props)
 </script>
 

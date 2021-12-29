@@ -5,6 +5,7 @@ import NotionKatek from "@/blocks/helpers/katex.vue"
 import { computed } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { properties, pass } = useNotionBlock(props)
 
 const equation = computed(() => properties.value.title?.[0]?.[0])

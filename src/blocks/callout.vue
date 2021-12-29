@@ -4,6 +4,7 @@ import NotionPageIcon from "@/blocks/helpers/page-icon.vue"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { pass, title, blockColorClass } = useNotionBlock(props)
 </script>
 

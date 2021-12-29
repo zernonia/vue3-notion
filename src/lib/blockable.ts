@@ -22,7 +22,6 @@ export const defineNotionProps = {
 
 export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
   const block = computed(() => {
-    if (!props.blockMap) return
     const id = props.contentId || Object.keys(props.blockMap)[0]
     return props.blockMap[id]
   })
@@ -72,7 +71,7 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
   })
 
   const visible = computed(() => {
-    return !props.hideList.includes(type.value)
+    return type.value ? !props.hideList?.includes(type.value) : false
   })
 
   const hasPageLinkOptions = computed(() => {
@@ -95,9 +94,11 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
   }
 
   const pageLinkProps = (id: string) => {
-    return {
-      [props.pageLinkOptions.href]: props.mapPageUrl(id),
-    }
+    return props.pageLinkOptions
+      ? {
+          [props.pageLinkOptions.href]: props.mapPageUrl(id),
+        }
+      : {}
   }
 
   return {

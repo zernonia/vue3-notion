@@ -5,6 +5,7 @@ import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import { computed } from "vue"
 
 const props = defineProps({ overrideLang: String, overrideLangClass: String, ...defineNotionProps })
+//@ts-ignore
 const { properties } = useNotionBlock(props)
 
 const lang = computed(() => {
@@ -16,7 +17,7 @@ const langClass = computed(() => {
 })
 
 const supported = computed(() => {
-  return Prism?.languages[lang.value]
+  return lang.value ? Prism?.languages[lang.value] : false
 })
 </script>
 

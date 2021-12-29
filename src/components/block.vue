@@ -17,6 +17,7 @@ import NotionTodo from "@/blocks/todo.vue"
 import NotionToggle from "@/blocks/toggle.vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { pass, block, visible, type, format, isType } = useNotionBlock(props)
 </script>
 

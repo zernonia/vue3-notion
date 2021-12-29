@@ -3,6 +3,7 @@ import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import { getTextContent } from "@/lib/utils"
 
 const props = defineProps({ big: Boolean, ...defineNotionProps })
+//@ts-ignore
 const { icon, format, block, title } = useNotionBlock(props)
 </script>
 

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
-import { computed } from "vue"
+import { computed, StyleValue } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { type, properties, f } = useNotionBlock(props)
 
 const src = computed(() => {
@@ -14,7 +15,7 @@ const style = computed(() => {
   return {
     paddingBottom: `${aspectRatio * 100}%`,
     position: "relative",
-  }
+  } as StyleValue
 })
 </script>
 

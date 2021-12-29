@@ -6,12 +6,13 @@ import { getListNumber } from "@/lib/utils"
 import { computed } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { block, type, title, pass } = useNotionBlock(props)
 
-const start = computed(() => {
-  getListNumber(block.value.value.id, props.blockMap)
-})
-const isTopLevel = computed(() => type.value != props.blockMap[block.value.value.parent_id].value.type)
+// const start = computed(() => {
+//   getListNumber(block.value.value.id, props.blockMap)
+// })
+const isTopLevel = computed(() => type.value != props.blockMap?.[block.value.value.parent_id].value.type)
 </script>
 
 <script lang="ts">
@@ -27,7 +28,7 @@ export default {
       <slot />
     </NotionNestedList>
   </ul>
-  <ol v-else-if="isTopLevel && type === 'numbered_list'" class="notion-list notion-list-numbered" :start="start">
+  <ol v-else-if="isTopLevel && type === 'numbered_list'" class="notion-list notion-list-numbered">
     <li><NotionTextRenderer :text="title" v-bind="pass" /></li>
     <NotionNestedList v-if="block.value.content" v-bind="pass">
       <slot />

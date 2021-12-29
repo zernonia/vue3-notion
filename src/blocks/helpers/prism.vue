@@ -23,7 +23,9 @@ const className = computed(() => `language-${language.value}`)
 
 const defaultSlot = (slots && slots.default && slots.default()) || []
 const code =
-  props.code || (defaultSlot && defaultSlot.length && defaultSlot[0]?.children) ? defaultSlot[0].children : ""
+  props.code || (defaultSlot && defaultSlot.length && defaultSlot[0]?.children)
+    ? (defaultSlot[0].children as string)
+    : ""
 const d = computed(() => Prism?.highlight(code, Prism?.languages[language.value], "en"))
 </script>
 

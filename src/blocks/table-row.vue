@@ -4,6 +4,7 @@ import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 import { computed, toRefs } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { parent, properties, pass } = useNotionBlock(props)
 
 const {

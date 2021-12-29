@@ -5,6 +5,7 @@ import NotionImage from "@/blocks/helpers/image.vue"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { pass, width, caption, isType } = useNotionBlock(props)
 </script>
 

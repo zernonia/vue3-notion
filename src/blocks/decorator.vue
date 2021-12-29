@@ -4,9 +4,10 @@ import NotionKatek from "@/blocks/helpers/katex.vue"
 import { computed, PropType } from "vue"
 
 const props = defineProps({
-  content: Object as PropType<string[]>,
+  content: Object as PropType<string[] | string>,
   ...defineNotionProps,
 })
+//@ts-ignore
 const { props: blockProps, pass, type, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
 
 const text = computed(() => props.content?.[0])

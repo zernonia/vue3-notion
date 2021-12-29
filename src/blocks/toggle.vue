@@ -3,6 +3,7 @@ import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { title, pass } = useNotionBlock(props)
 </script>
 

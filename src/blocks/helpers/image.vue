@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import { computed } from "vue"
+import { computed, StyleValue } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
+//@ts-ignore
 const { caption, properties, block, f } = useNotionBlock(props)
 const alt = computed(() => {
   return caption?.value?.[0][0]
@@ -17,7 +18,7 @@ const style = computed(() => {
   return {
     paddingBottom: `${aspectRatio * 100}%`,
     position: "relative",
-  }
+  } as StyleValue
 })
 </script>
 
@@ -31,5 +32,5 @@ export default {
   <div v-if="f.block_aspect_ratio" :style="style">
     <img class="notion-image-inset" :alt="alt || 'Notion image'" :src="src" />
   </div>
-  <img v-else :alt="caption" :src="src" />
+  <img v-else :alt="alt" :src="src" />
 </template>
