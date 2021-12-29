@@ -2,7 +2,7 @@
 import { useNuxtApp } from "#app"
 
 const { $notion } = useNuxtApp()
-const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("5d2dbe4e6e4f43f2abec00eef6624aa9"))
+const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("2e22de6b770e4166be301490f6ffd420"))
 
 // react-notion tester: 2e22de6b770e4166be301490f6ffd420
 // equation tester: 2a1d5226d68246deba627012081693f9
