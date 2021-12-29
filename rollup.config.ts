@@ -14,9 +14,7 @@ const globals = {
   "fragment-for-vue/vue3": "Fragment",
 }
 const plugins = [
-  typescript({
-    tsconfig: "./tsconfig.json",
-  }),
+  typescript({ tsconfig: "./tsconfig.json" }),
   replace({
     "process.env.NODE_ENV": JSON.stringify("production"),
     "process.env.ES_BUILD": JSON.stringify("false"),

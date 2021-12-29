@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// TODO: add notion styling
-// TODO: add strikethrough
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
 import { computed } from "vue"

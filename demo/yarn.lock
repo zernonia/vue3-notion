@@ -5262,10 +5262,10 @@ vue-style-loader@^4.1.3:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue3-notion@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.0.tgz#4a002f6533e993c23b370a28cdc318cd75fcb9a0"
-  integrity sha512-vTVfSingNDppIE5D/ZeR0TL7ablEE9rECB7KuGcy8MA/OBP+nzLBibTGs3bHZdAhxFbOq8r5uFhIL7OjLZ1yoA==
+vue3-notion@latest:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.1.tgz#6aacd19bdedc48c9290e6e95f6c1913653d68a45"
+  integrity sha512-tydUixVP6t6997TLpFAALvNLEiJGwPJViZ9IbIHwP6vS4wuMZAWOkqCSTIVMyUlLIiXr/pG6IV/x3/XFi+KwzQ==
   dependencies:
     "@nuxt/kit-edge" "^3.0.0-27338323.1e98259"
     fragment-for-vue "^1.0.1"

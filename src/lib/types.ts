@@ -72,5 +72,4 @@ export type NotionBlockProps = {
   prism: boolean
   katex: boolean
   textLinkTarget: string
-  todo: boolean
 }

@@ -8,10 +8,14 @@ const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("2e22d
 // equation tester: 2a1d5226d68246deba627012081693f9
 // table tester: bd1de400a8b349dc824f4f00e61d0797
 // todo tester: 235057194b954a60ace89c052a65d102
+
+const mapPageUrl = (pageId: String) => {
+  return `/page/${pageId}`
+}
 </script>
 
 <template>
   <div>
-    <NotionRenderer :blockMap="data" fullPage prism katex todo />
+    <NotionRenderer :blockMap="data" fullPage prism katex :mapPageUrl="mapPageUrl" />
   </div>
 </template>

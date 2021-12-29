@@ -17,7 +17,6 @@ export const defineNotionProps = {
   prism: { type: Boolean, default: false },
   katex: { type: Boolean, default: false },
   textLinkTarget: { type: String, default: "_blank" },
-  todo: { type: Boolean, default: false },
 }
 
 export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
@@ -40,7 +39,6 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
       pageLinkOptions: props.pageLinkOptions,
       prism: props.prism,
       katex: props.katex,
-      todo: props.todo,
     }
   })
 
