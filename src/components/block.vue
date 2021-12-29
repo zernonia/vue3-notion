@@ -20,7 +20,6 @@ import NotionToggle from "@/blocks/toggle.vue"
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { pass, block, visible, type, format, isType } = useNotionBlock(props)
-
 if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`)
 </script>
 

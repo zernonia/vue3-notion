@@ -16,10 +16,16 @@ export default {
 </script>
 
 <template>
-  <div>
-    <input type="checkbox" :value="title" :checked="properties.checked" disabled="true" />
-    <label>
+  <label class="notion-to-do-item">
+    <input
+      type="checkbox"
+      class="notion-property-checkbox"
+      :value="title"
+      :checked="properties.checked"
+      disabled="true"
+    />
+    <label :class="{ 'notion-to-do-checked': properties.checked }">
       <NotionTextRenderer :text="title" v-bind="pass" />
     </label>
-  </div>
+  </label>
 </template>
