@@ -11,17 +11,3 @@ const { data } = await useAsyncData("notion-index", () => $notion.getPageBlocks(
     <NotionRenderer :blockMap="data" fullPage prism katex :mapPageUrl="mapPageUrl" :pageLinkOptions="pageLinkOptions" />
   </div>
 </template>
-
-<style>
-.notion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0rem;
-}
-.notion-page-cover {
-  max-width: 1200px;
-  box-sizing: border-box;
-  border-radius: 25px;
-}
-</style>
