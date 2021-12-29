@@ -1,8 +1,9 @@
 import VueNotion from "vue3-notion"
 import { getPageBlocks, getPageTable } from "vue3-notion"
+import { defineNuxtPlugin } from "#app"
 
-export default (nuxtApp) => {
+export default defineNuxtPlugin(({ vueApp, provide }) => {
   const notion = { getPageBlocks, getPageTable }
-  nuxtApp.vueApp.use(VueNotion)
-  nuxtApp.provide("notion", notion)
-}
+  vueApp.use(VueNotion)
+  provide("notion", notion)
+})
