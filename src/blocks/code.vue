@@ -28,8 +28,10 @@ export default {
 </script>
 
 <template>
-  <div :class="['notion-code']">
+  <div v-if="supported" :class="['notion-code']">
     <PrismBlock :language="lang">{{ properties?.title[0][0] }}</PrismBlock>
   </div>
-  <!-- <pre v-else :class="['notion-code']"><code :class="langClass">{{ properties?.title[0][0] }}</code></pre> -->
+  <div v-else :class="['notion-code']">
+    <pre><code :class="langClass">{{ properties?.title[0][0] }}</code></pre>
+  </div>
 </template>
