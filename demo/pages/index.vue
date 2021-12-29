@@ -3,12 +3,7 @@ import { useNuxtApp } from "#app"
 import { mapPageUrl, pageLinkOptions } from "@/props"
 
 const { $notion } = useNuxtApp()
-const { data } = await useAsyncData("notion-index", () => $notion.getPageBlocks("2e22de6b770e4166be301490f6ffd420"))
-
-// react-notion tester: 2e22de6b770e4166be301490f6ffd420
-// equation tester: 2a1d5226d68246deba627012081693f9
-// table tester: bd1de400a8b349dc824f4f00e61d0797
-// todo tester: 235057194b954a60ace89c052a65d102
+const { data } = await useAsyncData("notion-index", () => $notion.getPageBlocks("4b2dc28a5df74034a943f8c8e639066a"))
 </script>
 
 <template>
@@ -16,3 +11,17 @@ const { data } = await useAsyncData("notion-index", () => $notion.getPageBlocks(
     <NotionRenderer :blockMap="data" fullPage prism katex :mapPageUrl="mapPageUrl" :pageLinkOptions="pageLinkOptions" />
   </div>
 </template>
+
+<style>
+.notion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+.notion-page-cover {
+  max-width: 1200px;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+</style>
