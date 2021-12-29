@@ -1,6 +1,6 @@
 {
   "name": "vue3-notion",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "Vue 3 Unofficial Notion Renderer",
   "repository": "github:zernonia/vue3-notion",
   "main": "dist/library.ts",
