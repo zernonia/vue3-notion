@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/zernonia/vue3-notion/raw/main/assets/vue3-notion.png" alt="vue3-notion" width="398px" />
+  <img src="https://github.com/zernonia/vue3-notion/raw/master/assets/vue3-notion.png" alt="vue3-notion" width="398px" />
   <p>An unofficial Notion renderer (Vue 3) version</p>
 </div>
 
@@ -7,8 +7,6 @@
   <a href="#features">Features</a>
   <span> · </span>
   <a href="#install">Install</a>
-  <span> · </span>
-  <a href="#docs">Docs</a>
   <span> · </span>
   <a href="#examples">Examples</a>
   <span> · </span>
@@ -132,31 +130,31 @@ const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("2e22d
 
 Most common block types are supported. We happily accept pull requests to add support for the missing blocks.
 
-| Block Type        | Supported      | Notes                  |
-| ----------------- | -------------- | ---------------------- |
-| Text              | ✅ Yes         |                        |
-| Heading           | ✅ Yes         |                        |
-| Image             | ✅ Yes         |                        |
-| Image Caption     | ✅ Yes         |                        |
-| Bulleted List     | ✅ Yes         |                        |
-| Numbered List     | ✅ Yes         |                        |
-| Quote             | ✅ Yes         |                        |
-| Callout           | ✅ Yes         |                        |
-| Column            | ✅ Yes         |                        |
-| iframe            | ✅ Yes         |                        |
-| Video             | ✅ Yes         | Only embedded videos   |
-| Divider           | ✅ Yes         |                        |
-| Link              | ✅ Yes         |                        |
-| Code              | ✅ Yes         |                        |
-| Web Bookmark      | ✅ Yes         |                        |
-| Toggle List       | ✅ Yes         |                        |
-| Page Links        | ✅ Yes         |                        |
-| Cover             | ✅ Yes         | Enable with `fullPage` |
-| Equations         | ✅ Yes         |                        |
-| Checkbox          | ✅ Yes         |                        |
-| Simple Tables     | ✅ Yes         |                        |
-| Databases         | ❌ Not planned |                        |
-| Table Of Contents | ❌ Not planned |                        |
+| Block Type        | Supported  | Notes                  |
+| ----------------- | ---------- | ---------------------- |
+| Text              | ✅ Yes     |                        |
+| Heading           | ✅ Yes     |                        |
+| Image             | ✅ Yes     |                        |
+| Image Caption     | ✅ Yes     |                        |
+| Bulleted List     | ✅ Yes     |                        |
+| Numbered List     | ✅ Yes     |                        |
+| Quote             | ✅ Yes     |                        |
+| Callout           | ✅ Yes     |                        |
+| Column            | ✅ Yes     |                        |
+| iframe            | ✅ Yes     |                        |
+| Video             | ✅ Yes     | Only embedded videos   |
+| Divider           | ✅ Yes     |                        |
+| Link              | ✅ Yes     |                        |
+| Code              | ✅ Yes     |                        |
+| Web Bookmark      | ✅ Yes     |                        |
+| Toggle List       | ✅ Yes     |                        |
+| Page Links        | ✅ Yes     |                        |
+| Cover             | ✅ Yes     | Enable with `fullPage` |
+| Equations         | ✅ Yes     |                        |
+| Checkbox          | ✅ Yes     |                        |
+| Simple Tables     | ✅ Yes     |                        |
+| Databases         | ☑️ Planned |                        |
+| Table Of Contents | ☑️ Planned |                        |
 
 Please, feel free to [open an issue](https://github.com/zernonia/vue3-notion/issues/new) if you notice any important blocks missing or anything wrong with existing blocks.
 
