@@ -3,7 +3,7 @@ import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionPageHeader from "@/blocks/helpers/page-header.vue"
 import NotionPageIcon from "@/blocks/helpers/page-icon.vue"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
-import { computed } from "vue"
+import { computed, StyleValue } from "vue"
 import { getTextContent } from "@/lib/utils"
 
 const props = defineProps({ ...defineNotionProps })
@@ -14,6 +14,14 @@ const coverStyle = computed(() => {
   const coverPosition = (1 - (format.value.page_cover_position || 0.5)) * 100
   return { objectPosition: `center ${coverPosition}%` }
 })
+const computedFont = computed(() => {
+  let font = (block.value.value.format?.page_font as string) || ""
+  if (font == "serif") {
+    return { fontFamily: "Lyon-Text, Georgia, ui-serif, serif" }
+  } else if (font == "mono") {
+    return { fontFamily: "iawriter-mono, Nitti, Menlo, Courier, monospace" }
+  }
+}) as StyleValue
 </script>
 
 <script lang="ts">
@@ -23,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="props.level === 0 && props.fullPage" class="notion">
+  <div v-if="props.level === 0 && props.fullPage" class="notion" :style="computedFont">
     <!-- todo: add header -->
     <!-- <NotionPageHeader v-if="!hideHeader" v-bind="pass" /> -->
     <!-- todo: hide image if no .format is available -->
