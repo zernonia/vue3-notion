@@ -16,7 +16,7 @@ import NotionTableRow from "@/blocks/table-row.vue"
 import NotionText from "@/blocks/text.vue"
 import NotionTodo from "@/blocks/todo.vue"
 import NotionToggle from "@/blocks/toggle.vue"
-import NotionTableOfContent from "@/blocks/table-of-contents.vue"
+import NotionTableOfContents from "@/blocks/table-of-contents.vue"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
@@ -54,6 +54,6 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
   <NotionFigure v-else-if="isType(['image', 'embed', 'figma', 'video', 'audio'])" v-bind="pass" />
   <NotionTable v-else-if="isType('table')" v-bind="pass"><slot /></NotionTable>
   <NotionTableRow v-else-if="isType('table_row')" v-bind="pass" />
-  <NotionTableOfContent v-else-if="isType('table_of_contents')" v-bind="pass"></NotionTableOfContent>
+  <NotionTableOfContents v-else-if="isType('table_of_contents')" v-bind="pass"></NotionTableOfContents>
   <hr v-else-if="isType('divider')" class="notion-hr" />
 </template>

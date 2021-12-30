@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Block } from "@/entry"
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionTableOfContentItem from "@/blocks/helpers/table-of-contents-item.vue"
+import NotionTableOfContentsItem from "@/blocks/helpers/table-of-contents-item.vue"
 import { computed } from "vue"
 
 interface BlockLevel extends Block {
@@ -52,10 +52,10 @@ export default {
         v-bind="pageLinkProps(header.value.id)"
         :is="props.pageLinkOptions?.component"
       >
-        <NotionTableOfContentItem :text="header.value.properties.title" :level="header.level" />
+        <NotionTableOfContentsItem :text="header.value.properties.title" :level="header.level" />
       </component>
       <a v-else class="notion-page-link" :target="props.pageLinkTarget" :href="`#${header.value.id}`">
-        <NotionTableOfContentItem :text="header.value.properties.title" :level="header.level" />
+        <NotionTableOfContentsItem :text="header.value.properties.title" :level="header.level" />
       </a>
     </template>
   </div>
