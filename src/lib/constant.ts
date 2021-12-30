@@ -23,4 +23,5 @@ export const availableType = [
   "table",
   "table_row",
   "divider",
+  "table_of_contents",
 ]
