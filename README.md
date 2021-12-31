@@ -52,6 +52,7 @@ This package doesn't handle the communication with the API (I planned to add thi
 
 ```bash
 npm install vue3-notion
+# yarn add vue3-notion
 ```
 
 ### Nuxt3 Module
@@ -95,17 +96,16 @@ import { ref, onMounted } from "vue"
 const data = ref()
 
 onMounted(async () => {
-  data.value = await getPageBlocks("8c1ab01960b049f6a282dda64a94afc7")
+  data.value = await getPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
 })
-}
 </script>
 
 <template>
-  <NotionRenderer :blockMap="data" fullPage />
+  <NotionRenderer v-if="data" :blockMap="data" fullPage />
 </template>
 
 <style>
-@import "vue3-notion/dist/styles.css"; /* optional Notion-like styles */
+@import "vue3-notion/dist/style.css"; /* optional Notion-like styles */
 </style>
 ```
 
@@ -153,10 +153,35 @@ Most common block types are supported. We happily accept pull requests to add su
 | Equations         | ✅ Yes     |                        |
 | Checkbox          | ✅ Yes     |                        |
 | Simple Tables     | ✅ Yes     |                        |
+| Table Of Contents | ✅ Yes     |                        |
 | Databases         | ☑️ Planned |                        |
-| Table Of Contents | ☑️ Planned |                        |
 
 Please, feel free to [open an issue](https://github.com/zernonia/vue3-notion/issues/new) if you notice any important blocks missing or anything wrong with existing blocks.
+
+# 🌎 Local Development
+
+## Prerequisites
+
+Yarn
+
+- ```sh
+  npm install --global yarn
+  ```
+
+## Development
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/zernonia/vue3-notion.git
+   ```
+2. Install NPM packages
+   ```sh
+   yarn
+   ```
+3. Run Development instance
+   ```sh
+   yarn dev
+   ```
 
 ## Credits
 
