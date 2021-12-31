@@ -16,17 +16,15 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div id="app">
-    <div v-if="blockMap">
-      <NotionRenderer
-        :blockMap="blockMap"
-        fullPage
-        prism
-        katex
-        :mapPageUrl="mapPageUrl"
-        :pageLinkOptions="pageLinkOptions"
-      />
-    </div>
+  <div v-if="blockMap">
+    <NotionRenderer
+      :blockMap="blockMap"
+      fullPage
+      prism
+      katex
+      :mapPageUrl="mapPageUrl"
+      :pageLinkOptions="pageLinkOptions"
+    />
   </div>
 </template>
 

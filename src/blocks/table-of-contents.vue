@@ -10,7 +10,7 @@ interface BlockLevel extends Block {
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
-const { pass, parent, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
+const { block, parent, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
 const headers = ["header", "sub_header", "sub_sub_header"]
 const headerObjects = computed(() => {
   if (!props.blockMap) return
@@ -35,6 +35,7 @@ const headerObjects = computed(() => {
 
   return temp
 })
+console.log(headerObjects)
 </script>
 
 <script lang="ts">
@@ -46,15 +47,7 @@ export default {
 <template>
   <div class="notion-table-of-contents">
     <template v-for="header in headerObjects">
-      <component
-        v-if="hasPageLinkOptions"
-        class="notion-page-link"
-        v-bind="pageLinkProps(header.value.id)"
-        :is="props.pageLinkOptions?.component"
-      >
-        <NotionTableOfContentsItem :text="header.value.properties.title" :level="header.level" />
-      </component>
-      <a v-else class="notion-page-link" :target="props.pageLinkTarget" :href="`#${header.value.id}`">
+      <a class="notion-page-link" :target="props.pageLinkTarget" :href="`#${header.value.id}`">
         <NotionTableOfContentsItem :text="header.value.properties.title" :level="header.level" />
       </a>
     </template>
