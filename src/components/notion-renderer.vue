@@ -4,6 +4,7 @@ import NotionBlock from "@/components/block.vue"
 
 import "prismjs/themes/prism.css"
 import "katex/dist/katex.min.css"
+import { computed } from "vue"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore

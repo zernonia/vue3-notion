@@ -16,11 +16,13 @@ import NotionTableRow from "@/blocks/table-row.vue"
 import NotionText from "@/blocks/text.vue"
 import NotionTodo from "@/blocks/todo.vue"
 import NotionToggle from "@/blocks/toggle.vue"
+import NotionTableOfContents from "@/blocks/table-of-contents.vue"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
-const { pass, block, visible, type, format, isType } = useNotionBlock(props)
+const { pass, type, format, isType } = useNotionBlock(props)
 if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`)
+// console.log(type.value)
 </script>
 
 <template>
@@ -52,5 +54,6 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
   <NotionFigure v-else-if="isType(['image', 'embed', 'figma', 'video', 'audio'])" v-bind="pass" />
   <NotionTable v-else-if="isType('table')" v-bind="pass"><slot /></NotionTable>
   <NotionTableRow v-else-if="isType('table_row')" v-bind="pass" />
+  <NotionTableOfContents v-else-if="isType('table_of_contents')" v-bind="pass"></NotionTableOfContents>
   <hr v-else-if="isType('divider')" class="notion-hr" />
 </template>

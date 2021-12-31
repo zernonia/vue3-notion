@@ -1339,9 +1339,11 @@ svg.notion-page-icon {
 }
 
 .notion-property-checkbox {
+  margin-top: 4px;
   width: 16px;
   height: 16px;
   background: var(--bg-color);
+  flex-shrink: 0;
 }
 
 .notion-to-do-item > input {
@@ -1644,38 +1646,6 @@ svg.notion-page-icon {
   height: 180px;
 }
 
-.notion-table-of-contents {
-  width: 100%;
-  margin: 4px 0;
-}
-
-.notion-table-of-contents-item {
-  color: inherit;
-  text-decoration: none;
-  user-select: none;
-  transition: background 20ms ease-in 0s;
-  cursor: pointer;
-  width: 100%;
-
-  padding: 6px 2px;
-  font-size: 14px;
-  line-height: 1.3;
-  display: flex;
-  align-items: center;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.notion-table-of-contents-item:hover {
-  background: var(--bg-color-0);
-}
-
-.notion-table-of-contents-item-body {
-  border-bottom: 1px solid var(--fg-color-1);
-}
-
 .notion-to-do {
   width: 100%;
   display: flex;
@@ -1685,7 +1655,7 @@ svg.notion-page-icon {
 .notion-to-do-item {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   padding-left: 2px;
   min-height: calc(1.5em + 3px + 3px);
@@ -2457,6 +2427,22 @@ svg.notion-page-icon {
 
 .notion-sync-block {
   width: 100%;
+}
+
+.notion-table-of-contents {
+  width: 100%;
+  margin: 4px 0;
+}
+
+.notion-table-of-contents-item {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--fg-color-6);
+  text-overflow: ellipsis;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--fg-color-1);
 }
 
 .token.operator,
