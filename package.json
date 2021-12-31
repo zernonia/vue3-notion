@@ -1,6 +1,6 @@
 {
   "name": "vue3-notion",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Vue 3 Unofficial Notion Renderer",
   "repository": "github:zernonia/vue3-notion",
   "main": "dist/library.ts",
@@ -33,7 +33,8 @@
     "pathe": "^0.2.0",
     "prismjs": "^1.25.0",
     "vue": "^3.2.26",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vue3-notion": "^0.1.3"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.8",

@@ -5233,7 +5233,7 @@ vue-loader@^16.8.3:
     hash-sum "^2.0.0"
     loader-utils "^2.0.0"
 
-vue-router@^4.0.12:
+vue-router@4, vue-router@^4.0.12:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
   integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
@@ -5262,10 +5262,10 @@ vue-style-loader@^4.1.3:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue3-notion@latest:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.1.tgz#6aacd19bdedc48c9290e6e95f6c1913653d68a45"
-  integrity sha512-tydUixVP6t6997TLpFAALvNLEiJGwPJViZ9IbIHwP6vS4wuMZAWOkqCSTIVMyUlLIiXr/pG6IV/x3/XFi+KwzQ==
+vue3-notion@^0.1.3, vue3-notion@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.4.tgz#55feacec5a0f22d83756432d194cf7631e3e78de"
+  integrity sha512-EN11nh32jJXEgY2brUBgdRjWr+FOupsCwJyPc13f1wv2KoNws5AxutKxlcIhfkX5SElNEk2bW7NBCSzIYfgr1A==
   dependencies:
     "@nuxt/kit-edge" "^3.0.0-27338323.1e98259"
     fragment-for-vue "^1.0.1"
@@ -5273,6 +5273,8 @@ vue3-notion@latest:
     pathe "^0.2.0"
     prismjs "^1.25.0"
     vue "^3.2.26"
+    vue-router "4"
+    vue3-notion "^0.1.3"
 
 vue@^3.2.21, vue@^3.2.26:
   version "3.2.26"
