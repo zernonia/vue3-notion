@@ -1339,9 +1339,11 @@ svg.notion-page-icon {
 }
 
 .notion-property-checkbox {
+  margin-top: 4px;
   width: 16px;
   height: 16px;
   background: var(--bg-color);
+  flex-shrink: 0;
 }
 
 .notion-to-do-item > input {
@@ -1653,7 +1655,7 @@ svg.notion-page-icon {
 .notion-to-do-item {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   padding-left: 2px;
   min-height: calc(1.5em + 3px + 3px);
