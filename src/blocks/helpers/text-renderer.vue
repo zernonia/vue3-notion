@@ -5,7 +5,7 @@ import { PropType } from "vue"
 
 const props = defineProps({ text: Object as PropType<string[]>, ...defineNotionProps })
 //@ts-ignore
-const { pass } = useNotionBlock(props)
+const { pass, format } = useNotionBlock(props)
 </script>
 
 <script lang="ts">

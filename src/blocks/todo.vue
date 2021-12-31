@@ -17,7 +17,7 @@ export default {
 
 <template>
   <label class="notion-to-do-item">
-    <input type="checkbox" class="notion-property-checkbox" :value="title" :checked="checked" disabled="true" />
+    <input type="checkbox" class="notion-property-checkbox" :value="checked" :checked="checked" disabled="true" />
     <label :class="{ 'notion-to-do-checked': checked }">
       <NotionTextRenderer :text="title" v-bind="pass" />
     </label>
