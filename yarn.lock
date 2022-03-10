@@ -2176,19 +2176,6 @@ vue-tsc@^0.29.8:
     "@volar/shared" "0.29.8"
     vscode-vue-languageservice "0.29.8"
 
-vue3-notion@latest:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.5.tgz#d2920f7e6444a923631da55b1cd128e1101569d2"
-  integrity sha512-Bh7bEnTy3Oztfg6Dz6Pt9VxZrWuYeH7mDp2Pg0m9yOloDCZ9YGGwUw7rJBFVjhmcYiyWYaU9aBySjSHefpq+5A==
-  dependencies:
-    "@nuxt/kit-edge" "^3.0.0-27338323.1e98259"
-    fragment-for-vue "^1.0.1"
-    katex "^0.15.1"
-    pathe "^0.2.0"
-    prismjs "^1.25.0"
-    vue "^3.2.26"
-    vue-router "4"
-
 vue@^3.2.26:
   version "3.2.31"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.31.tgz#e0c49924335e9f188352816788a4cca10f817ce6"
