@@ -7,6 +7,4 @@ export default defineNuxtConfig({
     link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
   },
   buildModules: ["vue3-notion/nuxt"],
-
-  css: ["vue3-notion/dist/style.css"],
 })
