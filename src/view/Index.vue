@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NotionRenderer } from "../components"
 import { useGetPageBlocks } from "../lib/composables"
-import { mapPageUrl, pageLinkOptions } from "../props"
+import { mapPageUrl, pageLinkOptions } from "../lib/props"
 
 // const blockMap = ref()
 

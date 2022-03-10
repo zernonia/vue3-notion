@@ -19,5 +19,5 @@
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "shim/*.d.ts"],
-  "exclude": ["src/router.ts", "src/props.ts", "src/main.ts", "src/env.d.ts"]
+  "exclude": ["src/router/index.ts", "src/lib/props.ts", "src/main.ts", "src/env.d.ts"]
 }

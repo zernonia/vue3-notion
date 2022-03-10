@@ -3,7 +3,7 @@ import { NotionRenderer } from "../components"
 import { getPageBlocks } from "../lib/api"
 import { onMounted, ref } from "vue"
 import { useRoute } from "vue-router"
-import { mapPageUrl, pageLinkOptions } from "../props"
+import { mapPageUrl, pageLinkOptions } from "../lib/props"
 
 const route = useRoute()
 const blockMap = ref()
