@@ -9,7 +9,6 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nuxt3": "3.0.0-27274229.29599f0",
-    "vue3-notion": "^0.1.4"
+    "nuxt3": "3.0.0-27274229.29599f0"
   }
 }

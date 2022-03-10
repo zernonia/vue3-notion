@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from "nuxt3"
+import vue3_notion from "../nuxt"
 
 export default defineNuxtConfig({
   meta: {
@@ -6,15 +7,7 @@ export default defineNuxtConfig({
     meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }],
     link: [{ rel: "icon", type: "image/svg", href: "/logo.svg" }],
   },
-  // vite: {
-  //   optimizeDeps: {
-  //     include: ["prismjs"],
-  //   },
-  // },
-  // build: {
-  //   transpile: ["prismjs"],
-  // },
-  buildModules: ["vue3-notion/nuxt"],
+  buildModules: [vue3_notion],
 
   css: ["vue3-notion/dist/style.css"],
 })
