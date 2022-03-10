@@ -2,6 +2,7 @@
   "name": "vue3-notion",
   "version": "0.1.5",
   "description": "Vue 3 Unofficial Notion Renderer",
+  "homepage": "https://vue3-notion.vercel.app/",
   "repository": "github:zernonia/vue3-notion",
   "main": "dist/library.ts",
   "browser": "dist/library.ts",
@@ -16,6 +17,9 @@
   ],
   "keywords": [
     "vue",
+    "vue3",
+    "nuxt",
+    "nuxt3",
     "notion"
   ],
   "license": "MIT",
