@@ -9,6 +9,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
+    "@nuxt/kit-edge": "^3.0.0-27447229.20f3171",
     "nuxt3": "3.0.0-27274229.29599f0"
   }
 }
