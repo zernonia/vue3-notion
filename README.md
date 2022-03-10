@@ -90,7 +90,7 @@ This example is a part of [`demo/`](https://github.com/zeronnia/vue3-notion/demo
 
 ```vue
 <script setup lang="ts">
-import { NotionRenderer, getPageBlocks } from "vue3-notion"
+import { NotionRenderer, getPageBlocks, useGetPageBlocks } from "vue3-notion"
 import { ref, onMounted } from "vue"
 
 const data = ref()
@@ -98,6 +98,10 @@ const data = ref()
 onMounted(async () => {
   data.value = await getPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
 })
+
+// ---- or using Composables ----
+
+const { data } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
 </script>
 
 <template>
