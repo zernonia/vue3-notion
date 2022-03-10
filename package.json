@@ -28,7 +28,10 @@
     "dev:build": "vue-tsc --noEmit && vite build",
     "build": "rollup -c && tsc --emitDeclarationOnly",
     "build:types": "vue-tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "npm run build",
+    "version": " git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@nuxt/kit-edge": "^3.0.0-27338323.1e98259",
