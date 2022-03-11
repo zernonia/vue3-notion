@@ -1,0 +1,15 @@
+{
+  "name": "nuxt3-notion",
+  "version": "0.0.1",
+  "description": "Nuxt 3 Notion Renderer.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "nuxt3": "^3.0.0-27447229.20f3171",
+    "vue3-notion": "^0.1.9"
+  }
+}
