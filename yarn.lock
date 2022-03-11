@@ -60,7 +60,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt/kit-edge@^3.0.0-27338323.1e98259":
+"@nuxt/kit-edge@^3.0.0-27449998.32cf973":
   version "3.0.0-27449998.32cf973"
   resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27449998.32cf973.tgz#b4bdc037489dfe13036b86694513b0ad2a6bd89b"
   integrity sha512-P7CSBD4/50PS48QPdL1JOS/4dhnB9kR/lPDhixyroh3YXNPwsJmMMQnb1H0neNWUCETbTFzCsYX7d0HnovXvEw==
