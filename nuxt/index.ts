@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPluginTemplate } from "@nuxt/kit"
+import { defineNuxtModule, addPluginTemplate } from "@nuxt/kit-edge"
 import { fileURLToPath } from "url"
 import { dirname, resolve } from "pathe"
 

@@ -60,7 +60,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt/kit-edge@latest":
+"@nuxt/kit-edge@^3.0.0-27449998.32cf973":
   version "3.0.0-27449998.32cf973"
   resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27449998.32cf973.tgz#b4bdc037489dfe13036b86694513b0ad2a6bd89b"
   integrity sha512-P7CSBD4/50PS48QPdL1JOS/4dhnB9kR/lPDhixyroh3YXNPwsJmMMQnb1H0neNWUCETbTFzCsYX7d0HnovXvEw==
@@ -83,13 +83,6 @@
     unctx "^1.0.2"
     unimport "0.0.8"
     untyped "^0.4.2"
-
-"@nuxt/kit@^0.8.1-edge":
-  version "0.8.1-edge"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-0.8.1-edge.tgz#880c6b28819cd6bc6800771823ba3af392003783"
-  integrity sha512-7kU+mYxRy3w9UohFK/rfrPkKXM9A4LWsTqpFN3MH7mxohy98SFBkf87B6nqE6ulXmztInK+MptS0Lr+VQa0E6w==
-  dependencies:
-    "@nuxt/kit-edge" latest
 
 "@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-27449998.32cf973":
   version "3.0.0-27449998.32cf973"
