@@ -9,7 +9,8 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nuxt3": "^3.0.0-27447229.20f3171",
+    "@nuxt/kit-edge": "^3.0.0-27449998.32cf973",
+    "nuxt3": "^3.0.0-27449998.32cf973",
     "vue3-notion": "^0.1.9"
   }
 }
