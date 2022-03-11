@@ -8,3 +8,4 @@ dist-ssr
 .output
 .env
 .log
+.vercel

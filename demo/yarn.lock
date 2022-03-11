@@ -353,6 +353,7 @@
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
 "@nuxt/kit-edge@^3.0.0-27449998.32cf973", "@nuxt/kit@npm:@nuxt/kit-edge@3.0.0-27449998.32cf973":
+  name "@nuxt/kit"
   version "3.0.0-27449998.32cf973"
   resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27449998.32cf973.tgz#b4bdc037489dfe13036b86694513b0ad2a6bd89b"
   integrity sha512-P7CSBD4/50PS48QPdL1JOS/4dhnB9kR/lPDhixyroh3YXNPwsJmMMQnb1H0neNWUCETbTFzCsYX7d0HnovXvEw==
@@ -4432,7 +4433,7 @@ vue-server-renderer@^2.6.14:
     serialize-javascript "^3.1.0"
     source-map "0.5.6"
 
-vue3-notion@latest:
+vue3-notion@^0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.7.tgz#7b3ca89d94b0d6d9ce383131873f692d29dc69ac"
   integrity sha512-/EULGqhsW2H3UiFD/ote+KACmz8CCMS/MhOcfMvZUvOHswy2kw/fnwa4SLKdWw+if+HM9J6wvTUYse+s5wIQlA==
