@@ -4,9 +4,9 @@
   "description": "Vue 3 Unofficial Notion Renderer",
   "homepage": "https://vue3-notion.vercel.app/",
   "repository": "github:zernonia/vue3-notion",
-  "main": "dist/library.ts",
-  "browser": "dist/library.ts",
-  "module": "dist/library.ts",
+  "main": "dist/library.js",
+  "browser": "dist/library.js",
+  "module": "dist/library.js",
   "unpkg": "dist/min.js",
   "files": [
     "dist/**/*.ts",

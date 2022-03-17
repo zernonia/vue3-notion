@@ -36,7 +36,7 @@ export default [
       {
         format: "esm",
         name: "Vue3Notion",
-        file: "dist/library.ts",
+        file: "dist/library.js",
         exports: "named",
       },
     ],
@@ -51,7 +51,7 @@ export default [
         compact: true,
         format: "cjs",
         name: "Vue3Notion",
-        file: "dist/library.ssr.ts",
+        file: "dist/library.ssr.js",
         exports: "named",
         globals,
       },
