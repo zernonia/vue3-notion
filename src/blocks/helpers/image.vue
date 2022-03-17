@@ -16,8 +16,8 @@ const src = computed(() => {
 const style = computed(() => {
   const aspectRatio = f.value.block_aspect_ratio || f.value.block_height / f.value.block_width
   return {
-    paddingBottom: `${aspectRatio * 100}%`,
     position: "relative",
+    aspectRatio: `${f.value.block_width} / ${f.value.block_height} `,
   } as StyleValue
 })
 </script>
