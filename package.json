@@ -7,7 +7,6 @@
   "main": "dist/entry.js",
   "module": "dist/entry.esm.js",
   "browser": "dist/min.js",
-  "unpkg": "dist/min.js",
   "files": [
     "dist/**/*.ts",
     "dist/**/*.js",
