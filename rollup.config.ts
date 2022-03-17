@@ -43,6 +43,7 @@ export default [
         name: "Vue3Notion",
         file: pkg.module,
         exports: "named",
+        globals,
       },
     ],
     external,
