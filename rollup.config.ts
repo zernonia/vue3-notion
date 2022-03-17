@@ -2,7 +2,7 @@ import alias from "@rollup/plugin-alias"
 import replace from "@rollup/plugin-replace"
 import vue from "rollup-plugin-vue"
 import peerDepsExternal from "rollup-plugin-peer-deps-external"
-import resolve from "@rollup/plugin-node-resolve"
+import { nodeResolve } from "@rollup/plugin-node-resolve"
 import commonjs from "@rollup/plugin-commonjs"
 import typescript from "rollup-plugin-typescript2"
 import postcss from "rollup-plugin-postcss"
@@ -17,7 +17,9 @@ const globals = {
   "fragment-for-vue/vue3": "Fragment",
 }
 const plugins = [
-  resolve(),
+  nodeResolve({
+    dedupe: external,
+  }),
   commonjs(),
   typescript({ tsconfig: "./tsconfig.json", abortOnError: false }),
   replace({
