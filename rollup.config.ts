@@ -5,6 +5,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external"
 import typescript from "rollup-plugin-typescript"
 import postcss from "rollup-plugin-postcss"
 import path from "path"
+import pkg from "./package.json"
 
 const external = ["vue"]
 const globals = {
@@ -36,14 +37,14 @@ export default [
       {
         format: "esm",
         name: "Vue3Notion",
-        file: "dist/library.js",
+        file: pkg.module,
         exports: "named",
       },
     ],
     external,
     plugins: [vue(), ...plugins],
   },
-  // SSR build.
+  // CJS, SSR build.
   {
     input: "src/entry.ts",
     output: [
@@ -51,7 +52,7 @@ export default [
         compact: true,
         format: "cjs",
         name: "Vue3Notion",
-        file: "dist/library.ssr.js",
+        file: pkg.main,
         exports: "named",
         globals,
       },
@@ -67,7 +68,7 @@ export default [
       compact: true,
       format: "iife",
       name: "Vue3Notion",
-      file: "dist/min.js",
+      file: pkg.browser,
       exports: "named",
       globals,
     },
