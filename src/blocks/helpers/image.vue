@@ -13,12 +13,26 @@ const src = computed(() => {
   return props.mapImageUrl(properties.value?.source[0][0], block.value)
 })
 
-const style = computed(() => {
-  const aspectRatio = f.value.block_aspect_ratio || f.value.block_height / f.value.block_width
+const aspectRatioStyle = computed(() => {
+  let aspectRatio =
+    f.value.block_width == 1 || f.value.block_height == 1
+      ? 1 / f.value.block_aspect_ratio
+      : `${f.value.block_width} / ${f.value.block_height} `
+
   return {
+    width: `${f.value.block_width}px`,
+    height: `100%`,
+    maxWidth: "100%",
     position: "relative",
-    aspectRatio: `${f.value.block_width} / ${f.value.block_height} `,
+    aspectRatio,
   } as StyleValue
+})
+
+const basicStyle = computed(() => {
+  return {
+    width: f.value.block_width == 1 ? "100%" : `${f.value.block_width}px`,
+    height: f.value.block_height == 1 ? "100%" : `${f.value.block_height}px`,
+  }
 })
 </script>
 
@@ -29,8 +43,8 @@ export default {
 </script>
 
 <template>
-  <div v-if="f.block_aspect_ratio" :style="style">
+  <div v-if="f.block_aspect_ratio" :style="aspectRatioStyle">
     <img class="notion-image-inset" :alt="alt || 'Notion image'" :src="src" />
   </div>
-  <img v-else :alt="alt" :src="src" />
+  <img v-else :alt="alt" :src="src" :style="basicStyle" />
 </template>
