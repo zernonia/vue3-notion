@@ -13,7 +13,6 @@
     "dist/**/*.js",
     "dist/**/*.d.ts",
     "dist/*.css",
-    "src/**/*.css",
     "nuxt/*.ts"
   ],
   "keywords": [
