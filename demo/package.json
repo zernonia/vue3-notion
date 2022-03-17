@@ -11,6 +11,6 @@
   "dependencies": {
     "@nuxt/kit-edge": "^3.0.0-27449998.32cf973",
     "nuxt3": "^3.0.0-27449998.32cf973",
-    "vue3-notion": "^0.1.9"
+    "vue3-notion": "^0.1.12"
   }
 }
