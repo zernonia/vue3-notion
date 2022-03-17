@@ -4,8 +4,8 @@
   "description": "Vue 3 Unofficial Notion Renderer",
   "homepage": "https://vue3-notion.vercel.app/",
   "repository": "github:zernonia/vue3-notion",
-  "main": "dist/entry.js",
-  "module": "dist/entry.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "browser": "dist/min.js",
   "files": [
     "dist/**/*.ts",

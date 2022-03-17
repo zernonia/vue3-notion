@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Block } from "@/entry"
+import { Block } from "@/lib/types"
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionTableOfContentsItem from "@/blocks/helpers/table-of-contents-item.vue"
 import { computed } from "vue"

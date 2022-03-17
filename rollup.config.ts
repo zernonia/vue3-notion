@@ -38,7 +38,7 @@ const plugins = [
 export default [
   // ESM build to be used with webpack/rollup.
   {
-    input: "src/entry.ts",
+    input: "src/index.ts",
     output: [
       {
         format: "esm",
@@ -53,7 +53,7 @@ export default [
   },
   // CJS, SSR build.
   {
-    input: "src/entry.ts",
+    input: "src/index.ts",
     output: [
       {
         compact: true,
@@ -70,7 +70,7 @@ export default [
   },
   // Browser build.
   {
-    input: "src/entry.ts",
+    input: "src/index.ts",
     output: {
       compact: true,
       format: "iife",
