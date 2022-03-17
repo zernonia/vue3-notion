@@ -2,12 +2,14 @@ import alias from "@rollup/plugin-alias"
 import replace from "@rollup/plugin-replace"
 import vue from "rollup-plugin-vue"
 import peerDepsExternal from "rollup-plugin-peer-deps-external"
-import typescript from "rollup-plugin-typescript"
+import resolve from "@rollup/plugin-node-resolve"
+import commonjs from "@rollup/plugin-commonjs"
+import typescript from "rollup-plugin-typescript2"
 import postcss from "rollup-plugin-postcss"
 import path from "path"
 import pkg from "./package.json"
 
-const external = ["vue"]
+const external = ["vue", "vue-router"]
 const globals = {
   vue: "Vue",
   katex: "katex",
@@ -15,7 +17,9 @@ const globals = {
   "fragment-for-vue/vue3": "Fragment",
 }
 const plugins = [
-  typescript({ tsconfig: "./tsconfig.json" }),
+  resolve(),
+  commonjs(),
+  typescript({ tsconfig: "./tsconfig.json", abortOnError: false }),
   replace({
     "process.env.NODE_ENV": JSON.stringify("production"),
     "process.env.ES_BUILD": JSON.stringify("false"),
