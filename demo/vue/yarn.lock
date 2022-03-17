@@ -1816,10 +1816,10 @@ vue-tsc@^0.29.8:
     "@volar/shared" "0.29.8"
     vscode-vue-languageservice "0.29.8"
 
-vue3-notion@^0.1.15:
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.15.tgz#3c71e7f048dc3526c684b17d6c69354a6959fffb"
-  integrity sha512-1gxfEFYrjCkzoAVpxllvTnt6R4+jQWzlZvPFCycLp5YSEJT8uKzFoSRxcnv8cBQM9UEISA0Rmpur//p27ytk2w==
+vue3-notion@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.16.tgz#dcb15bbb5f5a431ac24942c44842a822eaf7f2aa"
+  integrity sha512-3b+h/Q2nHXFVaUfXnNT6fO6EBxm23qMfgcF/F2rLnKJoGFRsbKpUiT+Fxk+C2PptAc+xwsdeZdVxHdPOVtOBMA==
   dependencies:
     "@nuxt/kit-edge" "^3.0.0-27449998.32cf973"
     fragment-for-vue "^1.0.1"
