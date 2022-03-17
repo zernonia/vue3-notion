@@ -29,9 +29,3 @@ const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
   </div>
 </template>
 
-<style>
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
-</style>

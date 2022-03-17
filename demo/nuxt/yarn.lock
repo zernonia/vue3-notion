@@ -4432,10 +4432,10 @@ vue-server-renderer@^2.6.14:
     serialize-javascript "^3.1.0"
     source-map "0.5.6"
 
-vue3-notion@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.12.tgz#59d1e657297462ac8202bb3c8e1fc5fcb6f829e1"
-  integrity sha512-f+JHa6PweKW4P0bVHJQOan9FFRYyxzjIdsTX8YofcJTWc1dlkuBHpK4+NyLOzkf9ZctVecRHuG0uT4lSvRi/WA==
+vue3-notion@^0.1.26:
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.26.tgz#d63c49b2ffb2fbf64962ae5a7cd30fdb2f9989df"
+  integrity sha512-JeZ3upG5Ql5MSlok01LTqC/tjIVhy1VEy6SiPAs/+EuTevwfiWHSvFjOYNFD+go7PGr/dgqKgPVs9NikwLYlLg==
   dependencies:
     "@nuxt/kit-edge" "^3.0.0-27449998.32cf973"
     fragment-for-vue "^1.0.1"

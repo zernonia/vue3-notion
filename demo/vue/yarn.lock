@@ -1655,7 +1655,7 @@ util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vite@^2.8.0:
+vite@^2.8.6:
   version "2.8.6"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.6.tgz#32d50e23c99ca31b26b8ccdc78b1d72d4d7323d3"
   integrity sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==
@@ -1816,10 +1816,10 @@ vue-tsc@^0.29.8:
     "@volar/shared" "0.29.8"
     vscode-vue-languageservice "0.29.8"
 
-vue3-notion@^0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.16.tgz#dcb15bbb5f5a431ac24942c44842a822eaf7f2aa"
-  integrity sha512-3b+h/Q2nHXFVaUfXnNT6fO6EBxm23qMfgcF/F2rLnKJoGFRsbKpUiT+Fxk+C2PptAc+xwsdeZdVxHdPOVtOBMA==
+vue3-notion@^0.1.26:
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.26.tgz#d63c49b2ffb2fbf64962ae5a7cd30fdb2f9989df"
+  integrity sha512-JeZ3upG5Ql5MSlok01LTqC/tjIVhy1VEy6SiPAs/+EuTevwfiWHSvFjOYNFD+go7PGr/dgqKgPVs9NikwLYlLg==
   dependencies:
     "@nuxt/kit-edge" "^3.0.0-27449998.32cf973"
     fragment-for-vue "^1.0.1"
