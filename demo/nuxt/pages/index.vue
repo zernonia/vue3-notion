@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useNuxtApp } from "#app"
-import { mapPageUrl, pageLinkOptions } from "@/props"
+import { mapPageUrl, pageLinkOptions } from "~~/props"
 
-const route = useRoute()
 const { $notion } = useNuxtApp()
-const { data } = await useAsyncData(`notion-${route.params.id}`, () => $notion.getPageBlocks(route.params.id))
+const { data } = await useAsyncData("notion-index", () => $notion.getPageBlocks("4b2dc28a5df74034a943f8c8e639066a"))
 </script>
 
 <template>
