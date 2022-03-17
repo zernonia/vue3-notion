@@ -1,12 +1,26 @@
 {
   "name": "vue3-notion",
-  "version": "0.1.16",
+  "version": "0.1.26",
   "description": "Vue 3 Unofficial Notion Renderer",
   "homepage": "https://vue3-notion.vercel.app/",
   "repository": "github:zernonia/vue3-notion",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "browser": "dist/min.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./nuxt": {
+      "require": "./nuxt/index.ts",
+      "import": "./nuxt/index.ts"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
   "files": [
     "dist/**/*.ts",
     "dist/**/*.js",
@@ -25,7 +39,8 @@
   "scripts": {
     "dev": "vite",
     "dev:build": "vue-tsc --noEmit && vite build",
-    "build": "rollup -c && tsc --emitDeclarationOnly",
+    "build": "vue-tsc --noEmit && vite build && rollup -c",
+    "build:rollup": "rollup -c",
     "build:types": "vue-tsc --noEmit",
     "preview": "vite preview",
     "version": " git add -A src",
@@ -53,11 +68,12 @@
     "rollup": "^2.62.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-vue": "^6.0.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.4",
-    "vite": "^2.7.2",
+    "vite": "^2.8.6",
+    "vite-plugin-dts": "^0.9.10",
     "vue-tsc": "^0.29.8"
   },
   "peerDependencies": {
