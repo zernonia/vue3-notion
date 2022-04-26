@@ -342,30 +342,6 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit-edge@^3.0.0-27449998.32cf973":
-  version "3.0.0-rc.1-27515112.2d202b5"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-rc.1-27515112.2d202b5.tgz#9bac4b37a7595e6abf40b63bb42e56686f012dd6"
-  integrity sha512-LBXNzAd6FSrWokHNPk8kL1Nz4v7WUP625wQrrItbI+2k91/L3gskfOBmwMnJNJa/NCDtPCMgeLArXExlF7ZrdQ==
-  dependencies:
-    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-rc.1-27515112.2d202b5"
-    c12 "^0.2.7"
-    consola "^2.15.3"
-    defu "^6.0.0"
-    globby "^13.1.1"
-    hash-sum "^2.0.0"
-    ignore "^5.2.0"
-    jiti "^1.13.0"
-    knitwork "^0.1.1"
-    lodash.template "^4.5.0"
-    mlly "^0.5.2"
-    pathe "^0.2.0"
-    pkg-types "^0.3.2"
-    scule "^0.2.1"
-    semver "^7.3.7"
-    unctx "^1.1.4"
-    unimport "^0.1.6"
-    untyped "^0.4.4"
-
 "@nuxt/kit@3.0.0-rc.0":
   version "3.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.0.tgz#839f45f039c330655f3e12bd288281c2f50b135d"
@@ -434,22 +410,6 @@
   version "3.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.1.tgz#ea8d3de35386cb287af6b54ba0075abee5d2ae61"
   integrity sha512-EhkSK8QnlAI/ZZoYHnks8yLa1KZRx+WO4gslkN9Wx85vU+3KAM7svSAljvSw3+7xxqQcZ1SeNuFXU3BT8r78KA==
-  dependencies:
-    c12 "^0.2.7"
-    create-require "^1.1.1"
-    defu "^6.0.0"
-    jiti "^1.13.0"
-    pathe "^0.2.0"
-    postcss-import-resolver "^2.0.0"
-    scule "^0.2.1"
-    std-env "^3.1.1"
-    ufo "^0.8.3"
-    unimport "^0.1.6"
-
-"@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-rc.1-27515112.2d202b5":
-  version "3.0.0-rc.1-27515112.2d202b5"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema-edge/-/schema-edge-3.0.0-rc.1-27515112.2d202b5.tgz#3958ad39ddac30e701209379316d3b6f0977c4a2"
-  integrity sha512-JTgExxeoLha+42EMqJmqNu+dN0kjaLZ8x+2bjZlik3KPPWS+6Vwb/D3XKAd33mD89Z+dgEPOK6/+ZlE64gAK+A==
   dependencies:
     c12 "^0.2.7"
     create-require "^1.1.1"
@@ -4693,12 +4653,12 @@ vue-router@4, vue-router@^4.0.14:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue3-notion@^0.1.26:
-  version "0.1.26"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.26.tgz#d63c49b2ffb2fbf64962ae5a7cd30fdb2f9989df"
-  integrity sha512-JeZ3upG5Ql5MSlok01LTqC/tjIVhy1VEy6SiPAs/+EuTevwfiWHSvFjOYNFD+go7PGr/dgqKgPVs9NikwLYlLg==
+vue3-notion@^0.1.28:
+  version "0.1.28"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.28.tgz#9a246f2d172014ca6a4e7c951ca8e63297929727"
+  integrity sha512-SJE8vfqnQzQxJNsyHifZrkSGOuwvGsBwdJ3oZK3+Ldhn517MgQOBeHgizChOUgHyTThw9iSxS30RU1Kta2YkHw==
   dependencies:
-    "@nuxt/kit-edge" "^3.0.0-27449998.32cf973"
+    "@nuxt/kit" "^3.0.0-rc.1"
     fragment-for-vue "^1.0.1"
     katex "^0.15.1"
     pathe "^0.2.0"
