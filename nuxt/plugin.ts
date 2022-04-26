@@ -5,5 +5,7 @@ import { defineNuxtPlugin } from "#app"
 export default defineNuxtPlugin(({ vueApp, provide }) => {
   const notion = { getPageBlocks, getPageTable }
   vueApp.use(VueNotion)
-  provide("notion", notion)
+  return {
+    notion,
+  }
 })

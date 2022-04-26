@@ -47,7 +47,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@nuxt/kit-edge": "^3.0.0-27449998.32cf973",
+    "@nuxt/kit": "^3.0.0-rc.1",
     "fragment-for-vue": "^1.0.1",
     "katex": "^0.15.1",
     "pathe": "^0.2.0",

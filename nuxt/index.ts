@@ -1,23 +1,16 @@
-import { defineNuxtModule, addPluginTemplate } from "@nuxt/kit-edge"
-import { fileURLToPath } from "url"
-import { dirname, resolve } from "pathe"
+import { defineNuxtModule, addPlugin, createResolver } from "@nuxt/kit"
 
 export default defineNuxtModule({
   meta: {
     name: "vue3-notion",
-    configKey: "vue3-notion",
+    configKey: "notion",
     compatibility: {
       nuxt: "^3.0.0",
     },
   },
   setup(options, nuxt) {
-    const filename = fileURLToPath(import.meta.url)
-    const __dirname = dirname(filename)
-    addPluginTemplate({
-      src: resolve(__dirname, "plugin.ts"),
-      filename: "vue3-notion.ts",
-      options,
-    })
+    const { resolve } = createResolver(import.meta.url)
+    addPlugin(resolve("./plugin"))
 
     const notionDeps = ["vue3-notion, fragment-for-vue", "katex", "prismjs"]
 
