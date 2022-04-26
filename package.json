@@ -37,8 +37,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
-    "dev:build": "vue-tsc --noEmit && vite build",
+    "dev": "vite -c vite-dev.config.ts",
+    "dev:build": "vue-tsc --noEmit && vite build -c vite-dev.config.ts",
     "build": "vue-tsc --noEmit && vite build && rollup -c",
     "build:rollup": "rollup -c",
     "build:types": "vue-tsc --noEmit",
