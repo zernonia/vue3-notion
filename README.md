@@ -119,8 +119,6 @@ This example is a part of [`demo/`](https://github.com/zeronnia/vue3-notion/demo
 
 ```vue
 <script setup lang="ts">
-import { useNuxtApp } from "#app"
-
 const { $notion } = useNuxtApp()
 const { data } = await useAsyncData("notion", () => $notion.getPageBlocks("2e22de6b770e4166be301490f6ffd420"))
 </script>
