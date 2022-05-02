@@ -69,8 +69,9 @@ import { defineNuxtConfig } from "nuxt3"
 
 export default defineNuxtConfig({
   //...
-  buildModules: ["vue3-notion/nuxt"],
-  css: ["vue3-notion/dist/style.css"],
+  modules: [
+    ["vue3-notion/nuxt", { css: true }], // css is not imported by default. Set `true` to import css
+  ],
 })
 ```
 
