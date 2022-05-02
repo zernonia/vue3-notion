@@ -111,6 +111,8 @@ const { data } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
 
 <style>
 @import "vue3-notion/dist/style.css"; /* optional Notion-like styles */
+@import "prismjs/themes/prism.css";
+@import "katex/dist/katex.min.css";
 </style>
 ```
 
