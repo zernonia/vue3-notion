@@ -20,6 +20,8 @@ export default defineNuxtModule({
 
     if (options.css) {
       nuxt.options.css.push("vue3-notion/dist/style.css")
+      nuxt.options.css.push("prismjs/themes/prism.css")
+      nuxt.options.css.push("katex/dist/katex.min.css")
     }
   },
 })
