@@ -18,6 +18,8 @@ export default defineNuxtModule({
       nuxt.options.build.transpile.push(dep)
     })
 
-    nuxt.options.css.push("vue3-notion/dist/style.css")
+    if (options.css) {
+      nuxt.options.css.push("vue3-notion/dist/style.css")
+    }
   },
 })
