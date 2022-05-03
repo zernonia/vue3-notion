@@ -29,6 +29,6 @@ const d = computed(() => Prism?.highlight(code, Prism?.languages[language.value]
 </script>
 
 <template>
-  <code :class="className" v-if="inline" v-html="d"></code>
-  <pre :class="className" v-else><code v-html="d"></code></pre>
+  <div :class="className" v-if="inline" v-html="d"></div>
+  <pre :class="className" v-else><div v-html="d"></div></pre>
 </template>
