@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue"
 import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
 import { availableType } from "@/lib/constant"
 import NotionBookmark from "@/blocks/bookmark.vue"
 import NotionCallout from "@/blocks/callout.vue"
-import NotionCode from "@/blocks/code.vue"
 import NotionColumn from "@/blocks/column.vue"
 import NotionEquation from "@/blocks/equation.vue"
 import NotionFigure from "@/blocks/helpers/figure.vue"
@@ -17,6 +17,8 @@ import NotionText from "@/blocks/text.vue"
 import NotionTodo from "@/blocks/todo.vue"
 import NotionToggle from "@/blocks/toggle.vue"
 import NotionTableOfContents from "@/blocks/table-of-contents.vue"
+
+const NotionCode = defineAsyncComponent(() => import("@/blocks/code.vue"))
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
