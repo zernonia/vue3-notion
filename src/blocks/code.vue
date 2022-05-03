@@ -7,7 +7,6 @@ import { computed } from "vue"
 const props = defineProps({ overrideLang: String, overrideLangClass: String, ...defineNotionProps })
 //@ts-ignore
 const { properties } = useNotionBlock(props)
-
 const lang = computed(() => {
   return props.overrideLang || properties.value?.language?.[0]?.[0]?.toLowerCase()
 })
@@ -19,6 +18,8 @@ const langClass = computed(() => {
 const supported = computed(() => {
   return lang.value ? Prism?.languages[lang.value] : false
 })
+
+const computedSlot = computed(() => properties.value?.title.map((i) => i?.[0]).join(""))
 </script>
 
 <script lang="ts">
@@ -29,9 +30,9 @@ export default {
 
 <template>
   <div v-if="supported" :class="['notion-code']">
-    <PrismBlock :language="lang">{{ properties?.title[0][0] }}</PrismBlock>
+    <PrismBlock :language="lang">{{ computedSlot }}</PrismBlock>
   </div>
   <div v-else :class="['notion-code']">
-    <pre><code :class="langClass">{{ properties?.title[0][0] }}</code></pre>
+    <pre><div :class="langClass">{{ computedSlot }}</div></pre>
   </div>
 </template>
