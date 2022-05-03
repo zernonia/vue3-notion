@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import { getTextContent } from "@/lib/utils"
+import DefaultPageIcon from "./default-page-icon.vue"
 
 const props = defineProps({ big: Boolean, ...defineNotionProps })
 //@ts-ignore
@@ -32,4 +33,5 @@ export default {
   >
     {{ icon }}
   </span>
+  <DefaultPageIcon class="notion-page-icon" v-else-if="!big"></DefaultPageIcon>
 </template>

@@ -693,7 +693,7 @@ img.notion-page-icon-offset {
   font-family: "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol",
     "Android Emoji", EmojiSymbols;
   font-size: 1.1em;
-  margin: 2px 4px 0 2px;
+  margin: 0 6px 0 2px;
   fill: var(--fg-color-6);
   color: var(--fg-color-icon);
 }
