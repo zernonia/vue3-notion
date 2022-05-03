@@ -4653,10 +4653,10 @@ vue-router@4, vue-router@^4.0.14:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue3-notion@^0.1.31:
-  version "0.1.31"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.31.tgz#2d663c1e3235a523499a6eaae0428bb98d0536de"
-  integrity sha512-iWCVAwOiI5S8aKnm5J/QMJQy3j9tx+MX2E5q0eZoZT7OYpeNdQAec4yRmX/Rf5hdooEfk6GY8ZmuSMMhGwn0DQ==
+vue3-notion@^0.1.32:
+  version "0.1.32"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.32.tgz#f68057cb64be05089ae8c6a720598729a54e7de4"
+  integrity sha512-qulbLUBE4nwR6RNO7W8MlBANlt5j3hEeh8vfxZGsXe5uimkEJ8A+qvKJy6o+Ee6NbTmC5X4wJWcDHfoSFvtuBg==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.1"
     fragment-for-vue "^1.0.1"
