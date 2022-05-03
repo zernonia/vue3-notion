@@ -116,6 +116,9 @@
 ::-webkit-scrollbar-thumb {
   background: #d3d1cb;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c1bf;
+}
 ::-webkit-scrollbar-track {
   background: #edece9;
 }
