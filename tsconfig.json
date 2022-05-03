@@ -16,7 +16,8 @@
     "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "noImplicitAny": false
   },
   "include": ["src/**/*.ts", "shim/*.d.ts"],
   "exclude": ["src/router/index.ts", "src/lib/props.ts", "src/main.ts", "src/env.d.ts"]
