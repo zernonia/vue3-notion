@@ -1032,6 +1032,7 @@ svg.notion-page-icon {
   align-items: center;
   box-sizing: border-box;
   margin: 4px 0;
+  align-items: baseline;
   /* border: 1px solid var(--fg-color-0); */
 }
 
