@@ -79,7 +79,7 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
     return props.blockMap[block.value?.value.parent_id]
   })
 
-  const isType = (t: any) => {
+  const isType = (t: string | string[]) => {
     if (Array.isArray(t)) {
       return visible.value && t.includes(type.value)
     }

@@ -24,4 +24,6 @@ export const availableType = [
   "table_row",
   "divider",
   "table_of_contents",
+  "transclusion_container",
+  "transclusion_reference",
 ]
