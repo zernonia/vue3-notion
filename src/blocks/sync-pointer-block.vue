@@ -7,7 +7,9 @@ const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { block, pass } = useNotionBlock(props)
 
-const referencePointerId = computed(() => block.value.value.format?.transclusion_reference_pointer?.id ?? "")
+const referencePointerId = computed(
+  () => (block.value.value.format?.transclusion_reference_pointer?.id as string) ?? ""
+)
 </script>
 
 <template>
@@ -16,7 +18,6 @@ const referencePointerId = computed(() => block.value.value.format?.transclusion
     :key="referencePointerId"
     :level="pass.level + 1"
     :content-id="referencePointerId"
-    :content-index="contentIndex"
   ></NotionRenderer>
 </template>
 
