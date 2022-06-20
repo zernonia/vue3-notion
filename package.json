@@ -52,6 +52,7 @@
     "katex": "^0.15.1",
     "pathe": "^0.2.0",
     "prismjs": "^1.25.0",
+    "static-tweet": "^0.0.1",
     "vue": "^3.2.26",
     "vue-router": "4"
   },
