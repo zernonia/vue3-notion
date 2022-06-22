@@ -19,9 +19,9 @@ import NotionToggle from "@/blocks/toggle.vue"
 import NotionTableOfContents from "@/blocks/table-of-contents.vue"
 import NotionSyncBlock from "@/blocks/sync-block.vue"
 import NotionSyncPointerBlock from "@/blocks/sync-pointer-block.vue"
-import NotionTweet from "@/blocks/tweet.vue"
 
 const NotionCode = defineAsyncComponent(() => import("@/blocks/code.vue"))
+const NotionTweet = defineAsyncComponent(() => import("@/blocks/tweet.vue"))
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore

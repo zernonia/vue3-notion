@@ -1,33 +1,34 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import { computed, nextTick, onBeforeMount, onMounted, ref, watch } from "vue"
+import { computed, onBeforeMount, getCurrentInstance, ref, onMounted } from "vue"
+import { useTwttr } from "./helpers/tweet"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
-const { properties, pass } = useNotionBlock(props)
+const { properties } = useNotionBlock(props)
+
 const tweetId = computed(() => properties.value?.source?.[0]?.[0].split("status/")?.[1])
 const el = ref<HTMLElement>()
+const error = ref()
 
 const renderTweet = () => {
   //@ts-ignore
   const twttr = window["twttr"]
   //@ts-ignore
   twttr?.ready().then(({ widgets }) => {
-    if (el.value) {
-      el.value.innerHTML = ""
-    }
-    widgets.createTweetEmbed(tweetId.value, el.value, {})
+    widgets
+      .createTweetEmbed(tweetId.value, el.value, {})
+      .then((element: any) => {
+        error.value = element ? undefined : "error"
+      })
+      .catch((err: any) => {
+        error.value = err
+      })
   })
 }
-
-onBeforeMount(() => {
-  let twttrScript = document.getElementById("twitter-widgets-js")
-  if (!twttrScript) {
-    var s = document.createElement("script")
-    s.id = "twitter-widgets-js"
-    s.src = "https://platform.twitter.com/widgets.js"
-    document.body.appendChild(s)
-  }
+useTwttr(renderTweet)
+onMounted(() => {
+  renderTweet()
 })
 </script>
 
@@ -38,5 +39,6 @@ export default {
 </script>
 
 <template>
-  <div ref="el"></div>
+  <div v-if="!error" class="notion-tweet" ref="el"></div>
+  <div v-else class="notion-tweet-error">Error loading Tweet</div>
 </template>
