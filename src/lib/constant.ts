@@ -22,6 +22,7 @@ export const availableType = [
   "audio",
   "table",
   "table_row",
+  "tweet",
   "divider",
   "table_of_contents",
   "transclusion_container",

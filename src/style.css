@@ -2470,6 +2470,17 @@ svg.notion-page-icon {
   text-decoration-color: var(--fg-color-1);
 }
 
+.notion-tweet {
+  display: flex;
+  justify-content: center;
+}
+.notion-tweet-error {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(233, 233, 231);
+  border-radius: 3px;
+}
+
 .token.operator,
 .token.entity,
 .token.url,

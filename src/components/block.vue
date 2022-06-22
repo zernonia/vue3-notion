@@ -21,6 +21,7 @@ import NotionSyncBlock from "@/blocks/sync-block.vue"
 import NotionSyncPointerBlock from "@/blocks/sync-pointer-block.vue"
 
 const NotionCode = defineAsyncComponent(() => import("@/blocks/code.vue"))
+const NotionTweet = defineAsyncComponent(() => import("@/blocks/tweet.vue"))
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
@@ -61,5 +62,6 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
   <NotionTableOfContents v-else-if="isType('table_of_contents')" v-bind="pass"></NotionTableOfContents>
   <NotionSyncBlock v-else-if="isType('transclusion_container')"><slot /></NotionSyncBlock>
   <NotionSyncPointerBlock v-else-if="isType('transclusion_reference')" v-bind="pass"></NotionSyncPointerBlock>
+  <NotionTweet v-else-if="isType('tweet')" v-bind="pass"></NotionTweet>
   <hr v-else-if="isType('divider')" class="notion-hr" />
 </template>
