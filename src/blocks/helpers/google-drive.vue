@@ -26,7 +26,7 @@ const constructDomain = (src?: string) => {
 
 <script lang="ts">
 export default {
-  name: "NotionBookmark",
+  name: "NotionGoogleDrive",
 }
 </script>
 
