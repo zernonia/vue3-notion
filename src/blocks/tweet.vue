@@ -7,7 +7,7 @@ const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { properties } = useNotionBlock(props)
 
-const tweetId = computed(() => properties.value?.source?.[0]?.[0].split("status/")?.[1])
+const tweetId = computed(() => properties.value?.source?.[0]?.[0].split("status/")?.[1].split("?")[0])
 const el = ref<HTMLElement>()
 const error = ref()
 
