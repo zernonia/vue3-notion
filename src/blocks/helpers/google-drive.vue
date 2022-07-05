@@ -32,12 +32,7 @@ export default {
 
 <template>
   <div class="notion-google-drive">
-    <component
-      v-if="hasPageLinkOptions"
-      class="notion-google-drive-link"
-      v-bind="pageLinkProps(block.value.id)"
-      :is="props.pageLinkOptions?.component"
-    >
+    <a rel="noopener noreferrer" target="_blank" :href="properties.url" class="notion-google-drive-link">
       <div class="notion-google-drive-preview">
         <img :src="constructThumbnail(properties.thumbnail)" :alt="properties.title" />
       </div>
@@ -61,6 +56,6 @@ export default {
           <div className="notion-google-drive-body-source-domain">{{ constructDomain(properties.url) }}</div>
         </div>
       </div>
-    </component>
+    </a>
   </div>
 </template>
