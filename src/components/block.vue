@@ -27,12 +27,11 @@ const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
 const { pass, type, format, isType } = useNotionBlock(props)
 if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`)
-// console.log(type.value)
 </script>
 
 <template>
   <div style="width: 100%" v-if="isType('page')">
-    <NotionPage v-bind="pass">
+    <NotionPage class="notion-page-content" v-bind="pass">
       <slot />
     </NotionPage>
   </div>
@@ -56,7 +55,7 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
   <NotionList v-else-if="isType(['bulleted_list', 'numbered_list'])" v-bind="pass">
     <slot />
   </NotionList>
-  <NotionFigure v-else-if="isType(['image', 'embed', 'figma', 'video', 'audio'])" v-bind="pass" />
+  <NotionFigure v-else-if="isType(['image', 'embed', 'figma', 'video', 'audio', 'drive', 'maps'])" v-bind="pass" />
   <NotionTable v-else-if="isType('table')" v-bind="pass"><slot /></NotionTable>
   <NotionTableRow v-else-if="isType('table_row')" v-bind="pass" />
   <NotionTableOfContents v-else-if="isType('table_of_contents')" v-bind="pass"></NotionTableOfContents>

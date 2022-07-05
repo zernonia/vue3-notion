@@ -156,8 +156,6 @@
 
 .notion-page-content {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 @media (min-width: 1300px) and (min-height: 300px) {
@@ -604,10 +602,10 @@ img.notion-page-icon-offset {
   padding-left: calc(min(12px, 8vw));
   padding-right: calc(min(12px, 8vw));
 }
-.notion-page > * {
+/* .notion-page > * {
   box-sizing: border-box;
   width: 100%;
-}
+} */
 
 .notion-full-width {
   --notion-max-width: calc(min(1920px, 98vw));
@@ -782,7 +780,6 @@ svg.notion-page-icon {
 .notion-asset-wrapper {
   margin: 0.5rem 0;
   max-width: 100vw;
-  width: 100%;
   min-width: 100%;
   align-self: center;
   display: flex;
@@ -1723,7 +1720,7 @@ svg.notion-page-icon {
   border-radius: 3px;
 
   user-select: none;
-  transition: background 20ms ease-in 0s;
+  transition: background 100ms ease-in 0s;
   cursor: pointer;
 }
 
@@ -2473,6 +2470,7 @@ svg.notion-page-icon {
 .notion-tweet {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .notion-tweet-error {
   font-size: 0.8rem;

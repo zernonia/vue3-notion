@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "web-bluetooth"],
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {

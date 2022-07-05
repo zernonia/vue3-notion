@@ -31,7 +31,20 @@ export interface Format {
   domain?: string
   original_url?: string
   page_icon?: string
+  drive_properties: GoogleDriveProperties
   [key: string]: any
+}
+
+export interface GoogleDriveProperties {
+  file_id: string
+  icon: string
+  modified_time: number
+  thumbnail: string
+  title: string
+  trashed: boolean
+  url: string
+  user_name: string
+  version: string
 }
 
 export interface Permission {

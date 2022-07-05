@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.1",
+    "@vueuse/core": "^8.7.5",
     "fragment-for-vue": "^1.0.1",
     "katex": "^0.15.1",
     "pathe": "^0.2.0",
