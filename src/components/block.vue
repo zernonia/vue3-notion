@@ -31,7 +31,7 @@ if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase(
 
 <template>
   <div style="width: 100%" v-if="isType('page')">
-    <NotionPage v-bind="pass">
+    <NotionPage class="notion-page-content" v-bind="pass">
       <slot />
     </NotionPage>
   </div>
