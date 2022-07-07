@@ -2,10 +2,11 @@
 import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
 import NotionPageIcon from "@/blocks/helpers/page-icon.vue"
 import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
+import NotionRenderer from "@/components/notion-renderer.vue"
 
 const props = defineProps({ ...defineNotionProps })
 //@ts-ignore
-const { pass, title, blockColorClass } = useNotionBlock(props)
+const { pass, title, blockColorClass, block } = useNotionBlock(props)
 </script>
 
 <script lang="ts">
@@ -20,7 +21,16 @@ export default {
       <NotionPageIcon v-bind="pass" />
     </div>
     <div class="notion-callout-text">
-      <NotionTextRenderer :text="title" v-bind="pass" />
+      <NotionRenderer
+        v-if="block.value.content"
+        v-for="(contentId, contentIndex) in block.value.content"
+        v-bind="pass"
+        :key="contentId"
+        :level="pass.level + 1"
+        :content-id="contentId"
+        :content-index="contentIndex"
+      />
+      <NotionTextRenderer v-else :text="title" v-bind="pass" />
     </div>
   </div>
 </template>
