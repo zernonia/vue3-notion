@@ -5,7 +5,7 @@ export default defineNuxtModule({
     name: "vue3-notion",
     configKey: "notion",
     compatibility: {
-      nuxt: "^3.0.0",
+      nuxt: "^3.0.0-rc.8",
     },
   },
   setup(options, nuxt) {
