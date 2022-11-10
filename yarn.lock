@@ -1232,11 +1232,6 @@ flat@^5.0.0:
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
-fragment-for-vue@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fragment-for-vue/-/fragment-for-vue-1.0.1.tgz#669c9779bd89a986ad3c8dfaf26af25237629a45"
-  integrity sha512-LTjux+UjhTL5tyGAA64GfUsJLLBnth0OwU3XZgzm0Z7lsbf7oObwGpBYUpgL4BMmUJaFmBo8ubsBVNMMUtMERA==
-
 fs-extra@^10.0.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
