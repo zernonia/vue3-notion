@@ -1,26 +1,32 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
+import { useNotionBlock, defineNotionProps } from "@/lib/blockable";
+import NotionHeaderRenderer from "@/blocks/helpers/header-renderer.vue";
+import NotionRenderer from "@/components/notion-renderer.vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { type, title, pass, block } = useNotionBlock(props)
+const { type, title, pass, block, format } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionHeader",
-}
+};
 </script>
 
 <template>
-  <h1 class="notion-h1" :id="block.value.id" v-if="type === 'header'">
-    <NotionTextRenderer :text="title" v-bind="pass" />
-  </h1>
-  <h2 class="notion-h2" :id="block.value.id" v-else-if="type === 'sub_header'">
-    <NotionTextRenderer :text="title" v-bind="pass" />
-  </h2>
-  <h3 class="notion-h3" :id="block.value.id" v-else-if="type === 'sub_sub_header'">
-    <NotionTextRenderer :text="title" v-bind="pass" />
-  </h3>
+  <details v-if="format?.toggleable" class="notion-toggle">
+    <summary><NotionHeaderRenderer class="notion-h" v-bind="pass"></NotionHeaderRenderer></summary>
+    <div>
+      <NotionRenderer
+        v-for="(contentId, contentIndex) in block.value.content"
+        v-bind="pass"
+        :key="contentId"
+        :level="pass.level + 1"
+        :content-id="contentId"
+        :content-index="contentIndex"
+      ></NotionRenderer>
+    </div>
+  </details>
+  <NotionHeaderRenderer v-else v-bind="pass"></NotionHeaderRenderer>
 </template>
