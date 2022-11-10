@@ -12,7 +12,7 @@ export default defineNuxtModule({
     const { resolve } = createResolver(import.meta.url);
     addPlugin(resolve("./plugin"));
 
-    const notionDeps = ["vue3-notion", "katex", "prismjs"];
+    const notionDeps = ["katex", "prismjs"];
 
     notionDeps.forEach((dep) => {
       nuxt.options.build.transpile.push(dep);
