@@ -573,7 +573,7 @@
   max-height: 124px;
 }
 
-span.notion-page-icon-cover {
+.notion-page-icon-cover span {
   height: 78px;
   width: 78px;
   font-size: 78px;
@@ -582,18 +582,18 @@ span.notion-page-icon-cover {
   margin-left: 0px;
 }
 
-span.notion-page-icon-offset {
+.notion-page-icon-offset span {
   margin-top: -42px;
 }
 
-img.notion-page-icon-cover {
+.notion-page-icon-cover img {
   border-radius: 3px;
   width: 124px;
   height: 124px;
   margin: 8px;
 }
 
-img.notion-page-icon-offset {
+.notion-page-icon-offset img {
   margin-top: -80px;
 }
 
