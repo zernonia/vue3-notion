@@ -49,7 +49,6 @@
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.1",
     "@vueuse/core": "^8.7.5",
-    "fragment-for-vue": "^1.0.1",
     "katex": "^0.15.1",
     "pathe": "^0.2.0",
     "prismjs": "^1.25.0",
@@ -78,7 +77,6 @@
     "vue-tsc": "^0.34.11"
   },
   "peerDependencies": {
-    "fragment-for-vue": "^1.0.1",
     "katex": "^0.15.1",
     "prismjs": "^1.25.0",
     "vue": "^3.2.20"
