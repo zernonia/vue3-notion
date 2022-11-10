@@ -10,7 +10,8 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nuxt": "^3.0.0-rc.3",
+    "notion-client": "^6.15.6",
+    "nuxt": "^3.0.0-rc.12",
     "vue3-notion": "^0.1.35"
   }
 }

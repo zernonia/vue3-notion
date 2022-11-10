@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <NuxtChild></NuxtChild>
+  <NuxtPage></NuxtPage>
 </template>
 
 <style>
