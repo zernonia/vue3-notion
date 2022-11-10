@@ -2316,11 +2316,6 @@ fraction.js@^4.2.0:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-fragment-for-vue@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fragment-for-vue/-/fragment-for-vue-1.0.1.tgz#669c9779bd89a986ad3c8dfaf26af25237629a45"
-  integrity sha512-LTjux+UjhTL5tyGAA64GfUsJLLBnth0OwU3XZgzm0Z7lsbf7oObwGpBYUpgL4BMmUJaFmBo8ubsBVNMMUtMERA==
-
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -4907,14 +4902,13 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue3-notion@^0.1.35:
-  version "0.1.35"
-  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.35.tgz#e3b8abf911591f6867a24aa658da775f2345a3aa"
-  integrity sha512-ihrAv0eq2dA8DOAzhlkdhc0gfyROyBAS++CRQomUUZa4GJVgOzPyjJFbfDy4mcj1y0LELJfge/S7FV3qZC08qw==
+vue3-notion@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/vue3-notion/-/vue3-notion-0.1.37.tgz#0bef78a5e2a1a50f97400d0cf3948bb2f3ea83b5"
+  integrity sha512-DRlQJQrEDj8x5zOkgZyRwb2QD+o3Ru8opdPXLcTVU/ebkGlWRUCMYoI90kfL0mOVjmgQPXfo5lLoLI9JxPE4Iw==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.1"
     "@vueuse/core" "^8.7.5"
-    fragment-for-vue "^1.0.1"
     katex "^0.15.1"
     pathe "^0.2.0"
     prismjs "^1.25.0"
