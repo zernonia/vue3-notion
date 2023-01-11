@@ -44,7 +44,8 @@
     "build:types": "vue-tsc --noEmit",
     "preview": "vite preview",
     "version": " git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "deploy": "npm run build && npm version patch && npm publish"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.1",
