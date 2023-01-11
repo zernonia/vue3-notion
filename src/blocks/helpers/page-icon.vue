@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div :class="[format.page_cover && 'notion-page-icon-offset', big ? 'notion-page-icon-cover' : 'notion-page-icon']">
+  <div :class="[format?.page_cover && 'notion-page-icon-offset', big ? 'notion-page-icon-cover' : 'notion-page-icon']">
     <img
       v-if="icon?.includes('http')"
       :src="props.mapImageUrl(icon, block)"
