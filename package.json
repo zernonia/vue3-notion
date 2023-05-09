@@ -35,6 +35,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite serve playground",
+    "dev:build": "vite build playground",
     "build": "unbuild",
     "preview": "vite preview",
     "version": " git add -A src",
