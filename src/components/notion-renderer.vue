@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { defineNotionProps, useNotionBlock } from "@/lib/blockable";
-import NotionBlock from "@/components/block.vue";
+import { defineNotionProps, useNotionBlock } from "../lib/blockable";
+import NotionBlock from "../components/block.vue";
 
 import "prismjs/themes/prism.css";
 import "katex/dist/katex.min.css";

@@ -7,10 +7,6 @@ export default defineBuildConfig({
     { builder: "mkdist", input: "./src/", format: "cjs", ext: "js" },
   ],
 
-  alias: {
-    "@": resolve(__dirname, "./src"),
-  },
-
   declaration: true,
   clean: true,
 });

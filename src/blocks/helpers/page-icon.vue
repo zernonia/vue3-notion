@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable";
-import { getTextContent } from "@/lib/utils";
+import { useNotionBlock, defineNotionProps } from "../../lib/blockable";
+import { getTextContent } from "../../lib/utils";
 import DefaultPageIcon from "./default-page-icon.vue";
 
 const props = defineProps({ big: Boolean, ...defineNotionProps });

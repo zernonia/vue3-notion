@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
-import { computed, toRefs } from "vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
+import { computed, toRefs } from "vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { parent, properties, pass } = useNotionBlock(props)
+const { parent, properties, pass } = useNotionBlock(props);
 
 const {
   table_block_column_header: hasHeaderColumn,
   table_block_row_header: hasHeaderRow,
   table_block_column_order: columns,
-} = parent.value.value.format
+} = parent.value.value.format;
 
 const cell = (columnId: string) => {
-  return properties.value[columnId]
-}
+  return properties.value[columnId];
+};
 const isHeader = (columnIndex: number) => {
-  return (hasHeaderColumn && props.contentIndex == 0) || (hasHeaderRow && columnIndex == 0)
-}
+  return (hasHeaderColumn && props.contentIndex == 0) || (hasHeaderRow && columnIndex == 0);
+};
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionTableRow",
-}
+};
 </script>
 
 <template>

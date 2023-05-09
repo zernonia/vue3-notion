@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import { getListNumber } from "@/lib/utils"
-import { computed } from "vue"
+import { useNotionBlock, defineNotionProps } from "../../lib/blockable";
+import { getListNumber } from "../../lib/utils";
+import { computed } from "vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { block, type } = useNotionBlock(props)
+const { block, type } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionNestedList",
-}
+};
 </script>
 
 <template>

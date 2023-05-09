@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionCode from "./code.vue"
-import NotionKatek from "@/blocks/helpers/katex.vue"
-import { computed } from "vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionCode from "./code.vue";
+import NotionKatek from "../blocks/helpers/katex.vue";
+import { computed } from "vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { properties, pass } = useNotionBlock(props)
+const { properties, pass } = useNotionBlock(props);
 
-const equation = computed(() => properties.value.title?.[0]?.[0])
+const equation = computed(() => properties.value.title?.[0]?.[0]);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionEquation",
-}
+};
 </script>
 
 <template>

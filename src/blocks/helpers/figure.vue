@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionAsset from "@/blocks/helpers/asset.vue"
-import NotionImage from "@/blocks/helpers/image.vue"
-import NotionGoogleDrive from "@/blocks/helpers/google-drive.vue"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
+import { useNotionBlock, defineNotionProps } from "../../lib/blockable";
+import NotionAsset from "../../blocks/helpers/asset.vue";
+import NotionImage from "../../blocks/helpers/image.vue";
+import NotionGoogleDrive from "../../blocks/helpers/google-drive.vue";
+import NotionTextRenderer from "../../blocks/helpers/text-renderer.vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { pass, width, caption, isType } = useNotionBlock(props)
+const { pass, width, caption, isType } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionFigure",
-}
+};
 </script>
 <template>
   <figure class="notion-asset-wrapper" :style="[isType('image') ? 'width:100%' : '']">

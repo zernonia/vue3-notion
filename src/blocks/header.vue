@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable";
-import NotionHeaderRenderer from "@/blocks/helpers/header-renderer.vue";
-import NotionRenderer from "@/components/notion-renderer.vue";
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionHeaderRenderer from "../blocks/helpers/header-renderer.vue";
+import NotionRenderer from "../components/notion-renderer.vue";
 
 const props = defineProps({ ...defineNotionProps });
 //@ts-ignore

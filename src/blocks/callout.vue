@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionPageIcon from "@/blocks/helpers/page-icon.vue"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
-import NotionRenderer from "@/components/notion-renderer.vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionPageIcon from "../blocks/helpers/page-icon.vue";
+import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
+import NotionRenderer from "../components/notion-renderer.vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { pass, title, blockColorClass, block } = useNotionBlock(props)
+const { pass, title, blockColorClass, block } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionCallout",
-}
+};
 </script>
 
 <template>

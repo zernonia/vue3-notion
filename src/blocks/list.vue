@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionNestedList from "@/blocks/helpers/nested-list.vue"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
-import { getListNumber } from "@/lib/utils"
-import { computed } from "vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionNestedList from "../blocks/helpers/nested-list.vue";
+import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
+import { getListNumber } from "../lib/utils";
+import { computed } from "vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { block, type, title, pass } = useNotionBlock(props)
+const { block, type, title, pass } = useNotionBlock(props);
 
 const start = computed(() => {
   return props.blockMap
     ? block.value?.value?.format?.list_start_index || getListNumber(block.value.value.id, props.blockMap)
-    : 0
-})
-const isTopLevel = computed(() => type.value != props.blockMap?.[block.value.value.parent_id].value.type)
+    : 0;
+});
+const isTopLevel = computed(() => type.value != props.blockMap?.[block.value.value.parent_id].value.type);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionList",
-}
+};
 </script>
 
 <template>

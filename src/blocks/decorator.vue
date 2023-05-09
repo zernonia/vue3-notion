@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionKatek from "@/blocks/helpers/katex.vue"
-import { computed, PropType } from "vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionKatek from "../blocks/helpers/katex.vue";
+import { computed, PropType } from "vue";
 
 const props = defineProps({
   content: Object as PropType<string[] | string>,
   ...defineNotionProps,
-})
+});
 //@ts-ignore
-const { props: blockProps, pass, type, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
+const { props: blockProps, pass, type, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props);
 
-const text = computed(() => props.content?.[0])
-const decorators = computed(() => props.content?.[1] || [])
-const decoratorKey = computed(() => decorators.value?.[0]?.[0])
-const decoratorValue = computed(() => decorators.value?.[0]?.[1])
+const text = computed(() => props.content?.[0]);
+const decorators = computed(() => props.content?.[1] || []);
+const decoratorKey = computed(() => decorators.value?.[0]?.[0]);
+const decoratorValue = computed(() => decorators.value?.[0]?.[1]);
 const unappliedDecorators = computed(() => {
-  const clonedDecorators = JSON.parse(JSON.stringify(decorators.value || []))
-  clonedDecorators.shift() // remove applied decorator
-  return clonedDecorators
-})
-const nextContent = computed(() => [text.value, unappliedDecorators.value])
-const isPageLink = computed(() => text.value === "‣")
-const isInlinePageLink = computed(() => decoratorValue.value?.[0] === "/")
+  const clonedDecorators = JSON.parse(JSON.stringify(decorators.value || []));
+  clonedDecorators.shift(); // remove applied decorator
+  return clonedDecorators;
+});
+const nextContent = computed(() => [text.value, unappliedDecorators.value]);
+const isPageLink = computed(() => text.value === "‣");
+const isInlinePageLink = computed(() => decoratorValue.value?.[0] === "/");
 const pageLinkTitle = computed(
   () => blockProps.blockMap?.[decoratorValue.value]?.value?.properties?.title?.[0]?.[0] || "link"
-)
+);
 const target = computed(() => {
   if (type.value === "page") {
-    return blockProps.pageLinkTarget
+    return blockProps.pageLinkTarget;
   }
-  return blockProps.textLinkTarget
-})
+  return blockProps.textLinkTarget;
+});
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionDecorator",
-}
+};
 </script>
 
 <template>

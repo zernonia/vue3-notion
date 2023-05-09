@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import { PropType, computed, StyleValue } from "vue"
+import { PropType, computed } from "vue";
 
-const props = defineProps({ text: Object as PropType<string[]>, level: { type: Number, default: 0 } })
-const computedText = computed(() => (props.text ? props.text.map((i) => i[0]).join("") : ""))
+const props = defineProps({ text: Object as PropType<string[]>, level: { type: Number, default: 0 } });
+const computedText = computed(() => (props.text ? props.text.map((i) => i[0]).join("") : ""));
 const computedStyle = computed(() => ({
   paddingLeft: 1.5 * props.level + "rem",
-})) as StyleValue
+}));
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionTableOfContentItem",
-}
+};
 </script>
 
 <template>

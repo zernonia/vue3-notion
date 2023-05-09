@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import { getTextContent } from "@/lib/utils"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import { getTextContent } from "../lib/utils";
+import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { f, properties, title, description, pass } = useNotionBlock(props)
+const { f, properties, title, description, pass } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionBookmark",
-}
+};
 </script>
 
 <template>

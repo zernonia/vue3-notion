@@ -1,47 +1,47 @@
 <script setup lang="ts">
-import { Block } from "@/lib/types"
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionTableOfContentsItem from "@/blocks/helpers/table-of-contents-item.vue"
-import { computed } from "vue"
+import { Block } from "../lib/types";
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionTableOfContentsItem from "../blocks/helpers/table-of-contents-item.vue";
+import { computed } from "vue";
 
 interface BlockLevel extends Block {
-  level: number
+  level: number;
 }
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { block, parent, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
-const headers = ["header", "sub_header", "sub_sub_header"]
+const { block, parent, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props);
+const headers = ["header", "sub_header", "sub_sub_header"];
 const headerObjects = computed(() => {
-  if (!props.blockMap) return
-  let temp: BlockLevel[] = []
+  if (!props.blockMap) return;
+  let temp: BlockLevel[] = [];
   Object.entries(props.blockMap).forEach(([key, value]) => {
     if (headers.includes(value.value.type) && value.value.parent_id == parent.value.value.id) {
-      let level = 0
+      let level = 0;
       if (temp.length) {
-        let prevBlock = temp[temp.length - 1]
+        let prevBlock = temp[temp.length - 1];
         if (value.value.type == "header") {
         } else if (value.value.type == "sub_header") {
-          level = 1
+          level = 1;
         } else if (value.value.type == prevBlock.value.type) {
-          level = prevBlock.level
+          level = prevBlock.level;
         } else if (value.value.type != prevBlock.value.type) {
-          level = prevBlock.level + 1
+          level = prevBlock.level + 1;
         }
       }
-      temp.push({ ...value, level })
+      temp.push({ ...value, level });
     }
-  })
+  });
 
-  return temp
-})
-console.log(headerObjects)
+  return temp;
+});
+console.log(headerObjects);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionTableOfContent",
-}
+};
 </script>
 
 <template>

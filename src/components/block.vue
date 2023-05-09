@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue"
-import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
-import { availableType } from "@/lib/constant"
-import NotionBookmark from "@/blocks/bookmark.vue"
-import NotionCallout from "@/blocks/callout.vue"
-import NotionColumn from "@/blocks/column.vue"
-import NotionEquation from "@/blocks/equation.vue"
-import NotionFigure from "@/blocks/helpers/figure.vue"
-import NotionHeader from "@/blocks/header.vue"
-import NotionList from "@/blocks/list.vue"
-import NotionPage from "@/blocks/page.vue"
-import NotionQuote from "@/blocks/quote.vue"
-import NotionTable from "@/blocks/table.vue"
-import NotionTableRow from "@/blocks/table-row.vue"
-import NotionText from "@/blocks/text.vue"
-import NotionTodo from "@/blocks/todo.vue"
-import NotionToggle from "@/blocks/toggle.vue"
-import NotionTableOfContents from "@/blocks/table-of-contents.vue"
-import NotionSyncBlock from "@/blocks/sync-block.vue"
-import NotionSyncPointerBlock from "@/blocks/sync-pointer-block.vue"
+import { defineAsyncComponent } from "vue";
+import { defineNotionProps, useNotionBlock } from "../lib/blockable";
+import { availableType } from "../lib/constant";
+import NotionBookmark from "../blocks/bookmark.vue";
+import NotionCallout from "../blocks/callout.vue";
+import NotionColumn from "../blocks/column.vue";
+import NotionEquation from "../blocks/equation.vue";
+import NotionFigure from "../blocks/helpers/figure.vue";
+import NotionHeader from "../blocks/header.vue";
+import NotionList from "../blocks/list.vue";
+import NotionPage from "../blocks/page.vue";
+import NotionQuote from "../blocks/quote.vue";
+import NotionTable from "../blocks/table.vue";
+import NotionTableRow from "../blocks/table-row.vue";
+import NotionText from "../blocks/text.vue";
+import NotionTodo from "../blocks/todo.vue";
+import NotionToggle from "../blocks/toggle.vue";
+import NotionTableOfContents from "../blocks/table-of-contents.vue";
+import NotionSyncBlock from "../blocks/sync-block.vue";
+import NotionSyncPointerBlock from "../blocks/sync-pointer-block.vue";
 
-const NotionCode = defineAsyncComponent(() => import("@/blocks/code.vue"))
-const NotionTweet = defineAsyncComponent(() => import("@/blocks/tweet.vue"))
+const NotionCode = defineAsyncComponent(() => import("../blocks/code.vue"));
+const NotionTweet = defineAsyncComponent(() => import("../blocks/tweet.vue"));
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { pass, type, format, isType } = useNotionBlock(props)
-if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`)
+const { pass, type, format, isType } = useNotionBlock(props);
+if (!availableType.includes(type.value)) console.warn(`${type.value.toUpperCase()} is not implemented yet`);
 </script>
 
 <template>

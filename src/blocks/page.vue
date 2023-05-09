@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { useNotionBlock, defineNotionProps } from "@/lib/blockable"
-import NotionPageHeader from "@/blocks/helpers/page-header.vue"
-import NotionPageIcon from "@/blocks/helpers/page-icon.vue"
-import NotionTextRenderer from "@/blocks/helpers/text-renderer.vue"
-import { computed, StyleValue } from "vue"
-import { getTextContent } from "@/lib/utils"
+import { useNotionBlock, defineNotionProps } from "../lib/blockable";
+import NotionPageHeader from "../blocks/helpers/page-header.vue";
+import NotionPageIcon from "../blocks/helpers/page-icon.vue";
+import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
+import { computed, StyleValue } from "vue";
+import { getTextContent } from "../lib/utils";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { format, title, block, pass, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props)
+const { format, title, block, pass, hasPageLinkOptions, pageLinkProps } = useNotionBlock(props);
 
 const coverStyle = computed(() => {
-  const coverPosition = (1 - (format.value.page_cover_position || 0.5)) * 100
-  return { objectPosition: `center ${coverPosition}%` }
-})
+  const coverPosition = (1 - (format.value.page_cover_position || 0.5)) * 100;
+  return { objectPosition: `center ${coverPosition}%` };
+});
 const computedFont = computed(() => {
-  let font = (block.value.value.format?.page_font as string) || ""
+  let font = (block.value.value.format?.page_font as string) || "";
   if (font == "serif") {
-    return { fontFamily: "Lyon-Text, Georgia, ui-serif, serif" }
+    return { fontFamily: "Lyon-Text, Georgia, ui-serif, serif" };
   } else if (font == "mono") {
-    return { fontFamily: "iawriter-mono, Nitti, Menlo, Courier, monospace" }
+    return { fontFamily: "iawriter-mono, Nitti, Menlo, Courier, monospace" };
   }
-}) as StyleValue
+}) as StyleValue;
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionPage",
-}
+};
 </script>
 
 <template>

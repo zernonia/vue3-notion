@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useNotionBlock } from "@/lib/blockable"
-import Decorator from "@/blocks/decorator.vue"
+import { useNotionBlock } from "../../lib/blockable";
+import Decorator from "../../blocks/decorator.vue";
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionPageHeader",
-}
+};
 </script>
 
 <template>

@@ -1,6 +1,6 @@
-import { defaultMapImageUrl, defaultMapPageUrl } from "@/lib/utils"
-import { computed, PropType } from "vue"
-import { NotionBlockProps, BlockMap } from "./types"
+import { defaultMapImageUrl, defaultMapPageUrl } from "../lib/utils";
+import { computed, PropType } from "vue";
+import { NotionBlockProps, BlockMap } from "./types";
 
 export const defineNotionProps = {
   blockMap: { type: Object as PropType<BlockMap>, required: true },
@@ -17,13 +17,13 @@ export const defineNotionProps = {
   prism: { type: Boolean, default: false },
   katex: { type: Boolean, default: false },
   textLinkTarget: { type: String, default: "_blank" },
-}
+};
 
 export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
   const block = computed(() => {
-    const id = props.contentId || Object.keys(props.blockMap)[0]
-    return props.blockMap[id]
-  })
+    const id = props.contentId || Object.keys(props.blockMap)[0];
+    return props.blockMap[id];
+  });
 
   const pass = computed(() => {
     return {
@@ -39,8 +39,8 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
       pageLinkOptions: props.pageLinkOptions,
       prism: props.prism,
       katex: props.katex,
-    }
-  })
+    };
+  });
 
   const f = computed(() => {
     return {
@@ -51,53 +51,53 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
       bookmark_icon: block.value?.value?.format?.bookmark_icon,
       bookmark_cover: block.value?.value?.format?.bookmark_cover,
       display_source: block.value?.value?.format?.display_source,
-    }
-  })
+    };
+  });
 
-  const format = computed(() => block.value?.value.format)
-  const properties = computed(() => block.value?.value.properties)
+  const format = computed(() => block.value?.value.format);
+  const properties = computed(() => block.value?.value.properties);
 
-  const icon = computed(() => format.value?.page_icon)
-  const width = computed(() => format.value?.block_width)
+  const icon = computed(() => format.value?.page_icon);
+  const width = computed(() => format.value?.block_width);
 
-  const title = computed(() => properties.value?.title)
-  const caption = computed(() => properties.value?.caption)
-  const description = computed(() => properties.value?.description)
+  const title = computed(() => properties.value?.title);
+  const caption = computed(() => properties.value?.caption);
+  const description = computed(() => properties.value?.description);
 
   const type = computed(() => {
-    return block.value?.value.type
-  })
+    return block.value?.value.type;
+  });
 
   const visible = computed(() => {
-    return type.value ? !props.hideList?.includes(type.value) : false
-  })
+    return type.value ? !props.hideList?.includes(type.value) : false;
+  });
 
   const hasPageLinkOptions = computed(() => {
-    return props.pageLinkOptions?.component && props.pageLinkOptions?.href
-  })
+    return props.pageLinkOptions?.component && props.pageLinkOptions?.href;
+  });
   const parent = computed(() => {
-    return props.blockMap[block.value?.value.parent_id]
-  })
+    return props.blockMap[block.value?.value.parent_id];
+  });
 
   const isType = (t: string | string[]) => {
     if (Array.isArray(t)) {
-      return visible.value && t.includes(type.value)
+      return visible.value && t.includes(type.value);
     }
-    return visible.value && type.value === t
-  }
+    return visible.value && type.value === t;
+  };
 
   const blockColorClass = (suffix = "") => {
-    const blockColor = block.value?.value?.format?.block_color
-    return blockColor ? `notion-${blockColor}${suffix}` : undefined
-  }
+    const blockColor = block.value?.value?.format?.block_color;
+    return blockColor ? `notion-${blockColor}${suffix}` : undefined;
+  };
 
   const pageLinkProps = (id: string) => {
     return props.pageLinkOptions
       ? {
           [props.pageLinkOptions.href]: props.mapPageUrl(id),
         }
-      : {}
-  }
+      : {};
+  };
 
   return {
     props,
@@ -119,5 +119,5 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
     isType,
     blockColorClass,
     pageLinkProps,
-  }
-}
+  };
+};
