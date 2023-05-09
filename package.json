@@ -4,13 +4,13 @@
   "description": "Vue 3 Unofficial Notion Renderer",
   "homepage": "https://vue3-notion.vercel.app/",
   "repository": "github:zernonia/vue3-notion",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "type": "module",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./nuxt": {
       "require": "./nuxt/index.ts",
@@ -22,11 +22,8 @@
     }
   },
   "files": [
-    "dist/**/*.ts",
-    "dist/**/*.js",
-    "dist/**/*.d.ts",
-    "dist/*.css",
-    "nuxt/*.ts"
+    "dist",
+    "nuxt"
   ],
   "keywords": [
     "vue",
@@ -37,45 +34,30 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "vite -c vite-dev.config.ts",
-    "dev:build": "vue-tsc --noEmit && vite build -c vite-dev.config.ts",
-    "build": "vue-tsc --noEmit && vite build && rollup -c",
-    "build:rollup": "rollup -c",
-    "build:types": "vue-tsc --noEmit",
+    "dev": "vite serve playground",
+    "dev:build": "vite build playground",
+    "build": "unbuild",
     "preview": "vite preview",
     "version": " git add -A src",
     "postversion": "git push && git push --tags",
     "deploy": "npm run build && npm version patch && npm publish"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0-rc.1",
+    "@nuxt/kit": "^3.4.3",
     "@vueuse/core": "^8.7.5",
     "katex": "^0.15.1",
-    "pathe": "^0.2.0",
     "prismjs": "^1.25.0",
     "vue": "^3.2.26",
     "vue-router": "4"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.8",
-    "@rollup/plugin-commonjs": "^21.0.2",
-    "@rollup/plugin-node-resolve": "^13.1.3",
-    "@rollup/plugin-replace": "^3.0.0",
     "@types/katex": "^0.11.1",
     "@types/node": "^17.0.5",
     "@types/prismjs": "^1.16.6",
-    "@vitejs/plugin-vue": "^2.0.0",
-    "postcss": "^8.4.5",
-    "rollup": "^2.62.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-vue": "^6.0.0",
-    "tslib": "^2.3.1",
-    "typescript": "^4.4.4",
-    "vite": "^2.9.7",
-    "vite-plugin-dts": "^0.9.10",
-    "vue-tsc": "^0.34.11"
+    "@vitejs/plugin-vue": "^4.2.1",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.5"
   },
   "peerDependencies": {
     "katex": "^0.15.1",

@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { defineNotionProps, useNotionBlock } from "@/lib/blockable"
-import NotionBlock from "@/components/block.vue"
+import { defineNotionProps, useNotionBlock } from "@/lib/blockable";
+import NotionBlock from "@/components/block.vue";
 
-import "prismjs/themes/prism.css"
-import "katex/dist/katex.min.css"
-import { computed } from "vue"
+import "prismjs/themes/prism.css";
+import "katex/dist/katex.min.css";
 
-const props = defineProps({ ...defineNotionProps })
+const props = defineProps({ ...defineNotionProps });
 //@ts-ignore
-const { pass, block } = useNotionBlock(props)
+const { pass, block } = useNotionBlock(props);
 </script>
 
 <script lang="ts">
 export default {
   name: "NotionRenderer",
-}
+};
 </script>
 
 <template>

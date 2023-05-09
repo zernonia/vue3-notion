@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { NotionRenderer } from "../components"
-import { useGetPageBlocks } from "../lib/composables"
-import { mapPageUrl, pageLinkOptions } from "../lib/props"
+import { NotionRenderer } from "@/components";
+import { useGetPageBlocks } from "@/lib/composables";
+import { mapPageUrl, pageLinkOptions } from "@/lib/props";
 
 // const blockMap = ref()
 
@@ -13,7 +13,7 @@ import { mapPageUrl, pageLinkOptions } from "../lib/props"
 //   blockMap.value = await getPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
 // })
 
-const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
+const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a");
 </script>
 
 <template>
@@ -28,4 +28,3 @@ const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
     />
   </div>
 </template>
-

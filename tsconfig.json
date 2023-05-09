@@ -11,13 +11,11 @@
     "esModuleInterop": true,
     "declaration": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "web-bluetooth"],
     "baseUrl": ".",
-    "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "shim/*.d.ts"],
-  "exclude": ["src/router/index.ts", "src/lib/props.ts", "src/main.ts", "src/env.d.ts"]
+
+  "include": ["src/**/*.ts", "src/**/*.vue", "playground/**/*.ts", "playground/**/*.vue"]
 }
