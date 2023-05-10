@@ -7,6 +7,7 @@
   "type": "module",
   "main": "./dist/vue3-notion.umd.cjs",
   "module": "./dist/vue3-notion.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue3-notion.js",
@@ -36,7 +37,7 @@
   "scripts": {
     "dev": "vite serve playground",
     "dev:build": "vite build playground",
-    "build": "vite build",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "preview": "vite preview",
     "version": " git add -A src",
     "postversion": "git push && git push --tags",
@@ -48,16 +49,17 @@
     "vue": "^3.2.26"
   },
   "devDependencies": {
-    "vue-router": "4",
     "@nuxt/kit": "^3.4.3",
-    "@vueuse/core": "^8.7.5",
     "@types/katex": "^0.11.1",
-    "@types/node": "^17.0.5",
+    "@types/node": "^20.1.1",
     "@types/prismjs": "^1.16.6",
     "@vitejs/plugin-vue": "^4.2.1",
+    "@vueuse/core": "^8.7.5",
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
-    "vite-plugin-dts": "^2.3.0"
+    "vite-plugin-dts": "^2.3.0",
+    "vue-router": "4",
+    "vue-tsc": "^1.6.4"
   },
   "peerDependencies": {
     "katex": "^0.15.1",

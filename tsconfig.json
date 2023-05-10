@@ -9,13 +9,14 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "declaration": true,
+    "declaration": false,
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
     }
   },
 
-  "include": ["src/**/*.ts", "src/**/*.vue", "playground/**/*.ts", "playground/**/*.vue"]
+  "include": ["src/**/*.ts", "src/**/*.vue"]
 }
