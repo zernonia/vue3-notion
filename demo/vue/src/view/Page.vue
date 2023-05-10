@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue"
-import { useRoute } from "vue-router"
-import { NotionRenderer, getPageBlocks } from "vue3-notion"
+import { useRoute } from "vue-router";
+import { NotionRenderer, useGetPageBlocks } from "vue3-notion";
 
-const route = useRoute()
-const blockMap = ref()
-onMounted(async () => {
-  blockMap.value = await getPageBlocks(route.params.id as string)
-})
+const route = useRoute();
+
+const { data: blockMap } = useGetPageBlocks(route.params.id?.toString());
 </script>
 
 <template>

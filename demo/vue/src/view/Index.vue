@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { NotionRenderer, useGetPageBlocks } from "vue3-notion"
+import { NotionRenderer, useGetPageBlocks } from "vue3-notion";
 
-const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a")
+const { data: blockMap } = useGetPageBlocks("4b2dc28a5df74034a943f8c8e639066a");
 </script>
 
 <template>

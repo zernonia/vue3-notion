@@ -6,5 +6,5 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/png", href: "/logo.png" }],
     },
   },
-  modules: [["vue3-notion/nuxt", { css: true }]],
+  modules: ["@nuxt/devtools", ["vue3-notion/nuxt", { css: true }]],
 });

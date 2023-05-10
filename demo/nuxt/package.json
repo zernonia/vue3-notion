@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "notion-client": "^6.15.6",
-    "nuxt": "^3.0.0-rc.12",
-    "vue3-notion": "^0.1.38"
+    "nuxt": "^3.4.3",
+    "vue3-notion": "^0.1.44"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.4.6"
   }
 }
