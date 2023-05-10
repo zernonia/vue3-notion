@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useNotionBlock, defineNotionProps } from "../lib/blockable";
-import NotionPageHeader from "../blocks/helpers/page-header.vue";
 import NotionPageIcon from "../blocks/helpers/page-icon.vue";
 import NotionTextRenderer from "../blocks/helpers/text-renderer.vue";
 import { computed, StyleValue } from "vue";
@@ -21,7 +20,7 @@ const computedFont = computed(() => {
   } else if (font == "mono") {
     return { fontFamily: "iawriter-mono, Nitti, Menlo, Courier, monospace" };
   }
-}) as StyleValue;
+});
 </script>
 
 <script lang="ts">

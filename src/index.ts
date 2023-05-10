@@ -1,5 +1,6 @@
 import { App } from "vue";
 import * as components from "./components";
+import "./style.css";
 
 // Default export is library as a whole, registered via Vue.use()
 export default {
