@@ -12,8 +12,20 @@ const groupBlockContent = (blockMap: BlockMap) => {
   let index = -1
 
   Object.keys(blockMap).forEach((id) => {
-    blockMap[id].value.content?.forEach((blockId) => {
-      const blockType = blockMap[blockId]?.value?.type
+    const block = blockMap[id]
+    if (!block || !block.value || !block.value.content) {
+      // Skip this block if it's undefined or doesn't have the expected structure
+      return
+    }
+
+    block.value.content.forEach((blockId) => {
+      const contentBlock = blockMap[blockId]
+      if (!contentBlock || !contentBlock.value) {
+        // Skip this content block if it's undefined or doesn't have the expected structure
+        return
+      }
+
+      const blockType = contentBlock.value.type
 
       if (blockType && blockType !== lastType) {
         index++
@@ -32,10 +44,10 @@ const groupBlockContent = (blockMap: BlockMap) => {
 
 export const getListNumber = (blockId: string, blockMap: BlockMap) => {
   const groups = groupBlockContent(blockMap)
-  const group = groups.find((g) => g.includes(blockId))
+  const group = groups.find((g) => g && g.includes(blockId))
 
   if (!group) {
-    return
+    return undefined
   }
 
   return group.indexOf(blockId) + 1
