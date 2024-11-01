@@ -10,7 +10,7 @@
   "dependencies": {
     "vue": "^3.2.25",
     "vue-router": "^4.0.14",
-    "vue3-notion": "^0.1.45"
+    "vue3-notion": "^0.1.46"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
