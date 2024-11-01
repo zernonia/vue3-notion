@@ -13,8 +13,9 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "outDir": "dist",
+    "skipLibCheck": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
     }
   },
 
