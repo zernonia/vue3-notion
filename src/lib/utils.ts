@@ -12,8 +12,14 @@ const groupBlockContent = (blockMap: BlockMap) => {
   let index = -1
 
   Object.keys(blockMap).forEach((id) => {
-    blockMap[id].value.content?.forEach((blockId) => {
-      const blockType = blockMap[blockId]?.value?.type
+    const blockValue = blockMap[id]?.value
+    if (!blockValue?.content) return
+
+    blockValue.content.forEach((blockId) => {
+      const nestedBlock = blockMap[blockId]?.value
+      if (!nestedBlock) return
+
+      const blockType = nestedBlock.type
 
       if (blockType && blockType !== lastType) {
         index++
