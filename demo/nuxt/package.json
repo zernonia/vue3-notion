@@ -12,6 +12,6 @@
   "dependencies": {
     "notion-client": "^6.15.6",
     "nuxt": "^3.13.2",
-    "vue3-notion": "^0.1.44"
+    "vue3-notion": "^0.1.45"
   }
 }

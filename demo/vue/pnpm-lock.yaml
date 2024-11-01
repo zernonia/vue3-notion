@@ -15,7 +15,7 @@ importers:
         specifier: ^4.0.14
         version: 4.4.5(vue@3.5.12(typescript@4.9.5))
       vue3-notion:
-        specifier: ^0.1.44
+        specifier: ^0.1.45
         version: 0.1.45(katex@0.15.6)(prismjs@1.29.0)(vue@3.5.12(typescript@4.9.5))
     devDependencies:
       '@vitejs/plugin-vue':
