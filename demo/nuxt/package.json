@@ -1,6 +1,7 @@
 {
   "name": "nuxt3-notion",
   "version": "0.0.1",
+  "type": "module",
   "description": "Nuxt 3 Notion Renderer.",
   "license": "MIT",
   "scripts": {

@@ -8,6 +8,6 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxt/devtools", ["vue3-notion/nuxt", { css: true }]],
   routeRules:{
-    '**': { swr: 120 } // every 2 * 60 seconds
+    '**': { isr: 120 } // every 2 * 60 seconds
   }
 });
